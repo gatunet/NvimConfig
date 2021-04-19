@@ -1,14 +1,51 @@
--- Init.lua NeoVim config file
-local utils = require('utils')
-
--- Leader key
-utils.map('n', '<Space>', '<Nop>', { noremap = true, silent = true })
-vim.g.mapleader = ' '
-
-vim.cmd [[packadd packer.nvim]]
-
-require('settings')
 require('plugins')
-require('config')
+require('lv-globals')
+require('lv-utils')
+vim.cmd('luafile ~/.config/nvim/lv-settings.lua')
+require('lv-autocommands')
+require('settings')
 require('keymappings')
+require('colorscheme')
+require('lv-lualine')
+require('lv-comment')
+require('lv-compe')
+require('lv-barbar')
+require('lv-dashboard')
+require('lv-telescope')
+require('lv-gitsigns')
+require('lv-nvimtree')
+require('lv-treesitter')
+require('lv-autopairs')
+require('lv-comfortable-motion')
+
+-- Which Key (Hope to replace with Lua plugin someday)
+vim.cmd('source ~/.config/nvim/vimscript/lv-whichkey/init.vim')
+vim.cmd('source ~/.config/nvim/vimscript/functions.vim')
+
+-- LSP
+require('lsp')
+require('lsp.clangd')
+require('lsp.php-ls')
+require('lsp.dart-ls')
+require('lsp.lua-ls')
+require('lsp.bash-ls')
+require('lsp.go-ls')
+require('lsp.js-ts-ls')
+require('lsp.python-ls')
+require('lsp.rust-ls')
+require('lsp.json-ls')
+require('lsp.yaml-ls')
+require('lsp.terraform-ls')
+require('lsp.vim-ls')
+require('lsp.graphql-ls')
+require('lsp.docker-ls')
+require('lsp.html-ls')
+require('lsp.css-ls')
+require('lsp.emmet-ls')
+require('lsp.efm-general-ls')
+require('lsp.latex-ls')
+require('lsp.svelte-ls')
+require('lsp.tailwindcss-ls')
+require('lsp.ruby-ls')
+require('lsp.kotlin-ls')
 

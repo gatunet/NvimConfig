@@ -1,28 +1,65 @@
-local opts = { noremap = true, silent = true }
+vim.api.nvim_set_keymap('n', '<Space>', '<NOP>', {noremap = true, silent = true})
+vim.g.mapleader = ' '
 
--- Smother movement
-vim.api.nvim_set_keymap('n', '<C-h>', '<cmd>wincmd h<CR>', opts)
-vim.api.nvim_set_keymap('n', '<C-j>', '<cmd>wincmd j<CR>', opts)
-vim.api.nvim_set_keymap('n', '<C-k>', '<cmd>wincmd k<CR>', opts)
-vim.api.nvim_set_keymap('n', '<C-l>', '<cmd>wincmd l<CR>', opts)
+-- no hl
+vim.api.nvim_set_keymap('n', '<Leader>h', ':set hlsearch!<CR>', {noremap = true, silent = true})
 
--- Handling files
-vim.api.nvim_set_keymap('n', 'W', '<cmd>w<CR>', { noremap = true }) -- smart save
-vim.api.nvim_set_keymap('n', 'Q', '<cmd>wq<CR>', { noremap = true }) -- smart quit
-vim.api.nvim_set_keymap('n', '<Leader>sv', '<cmd>luafile %<CR>', { noremap = true })
+-- explorer
+vim.api.nvim_set_keymap('n', '<Leader>e', ':NvimTreeToggle<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '-', ':RnvimrToggle<CR>', {noremap = true, silent = true})
 
--- Smart split
-vim.api.nvim_set_keymap('n', '<Leader>h', '<cmd>split<CR>', opts)
-vim.api.nvim_set_keymap('n', '<Leader>v', '<cmd>vsplit<CR>', opts)
+-- better window movement
+vim.api.nvim_set_keymap('n', '<C-h>', '<C-w>h', {silent = true})
+vim.api.nvim_set_keymap('n', '<C-j>', '<C-w>j', {silent = true})
+vim.api.nvim_set_keymap('n', '<C-k>', '<C-w>k', {silent = true})
+vim.api.nvim_set_keymap('n', '<C-l>', '<C-w>l', {silent = true})
 
--- <Tab> to navigate the completion menu
-vim.api.nvim_set_keymap('i', '<S-Tab>', 'pumvisible() ? "\\<C-p>" : "\\<Tab>"', { noremap = true, expr = true })
-vim.api.nvim_set_keymap('i', '<Tab>', 'pumvisible() ? "\\<C-n>" : "\\<Tab>"', { noremap = true, expr = true })
+-- TODO fix this
+-- Terminal window navigation
+vim.cmd([[
+  tnoremap <C-h> <C-\><C-N><C-w>h
+  tnoremap <C-j> <C-\><C-N><C-w>j
+  tnoremap <C-k> <C-\><C-N><C-w>k
+  tnoremap <C-l> <C-\><C-N><C-w>l
+  inoremap <C-h> <C-\><C-N><C-w>h
+  inoremap <C-j> <C-\><C-N><C-w>j
+  inoremap <C-k> <C-\><C-N><C-w>k
+  inoremap <C-l> <C-\><C-N><C-w>l
+  tnoremap <Esc> <C-\><C-n>
+]])
 
--- LSP management
-vim.api.nvim_set_keymap('n', '<Leader>ljr', "<cmd>lua require('lspconfig').tsserver.autostart()<CR>", opts)
+-- TODO fix this
+-- resize with arrows
+vim.cmd([[
+  nnoremap <silent> <C-Up>    :resize -2<CR>
+  nnoremap <silent> <C-Down>  :resize +2<CR>
+  nnoremap <silent> <C-Left>  :vertical resize -2<CR>
+  nnoremap <silent> <C-Right> :vertical resize +2<CR>
+]])
 
--- NVim Terminal
--- Ctrl + \ + Ctrl n -- to exit insert mode
-vim.api.nvim_set_keymap('n', '<Leader>t', '<cmd>terminal<CR>', { noremap = true })
+-- better indenting
+vim.api.nvim_set_keymap('v', '<', '<gv', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('v', '>', '>gv', {noremap = true, silent = true})
 
+-- Tab switch buffer
+vim.api.nvim_set_keymap('n', '<TAB>', ':bnext<CR>', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('n', '<S-TAB>', ':bprevious<CR>', {noremap = true, silent = true})
+
+-- Move selected line / block of text in visual mode
+vim.api.nvim_set_keymap('x', 'K', ':move \'<-2<CR>gv-gv', {noremap = true, silent = true})
+vim.api.nvim_set_keymap('x', 'J', ':move \'>+1<CR>gv-gv', {noremap = true, silent = true})
+
+-- Better nav for omnicomplete
+vim.cmd('inoremap <expr> <c-j> (\"\\<C-n>\")')
+vim.cmd('inoremap <expr> <c-k> (\"\\<C-p>\")')
+-- vim.cmd('inoremap <expr> <TAB> (\"\\<C-n>\")')
+-- vim.cmd('inoremap <expr> <S-TAB> (\"\\<C-p>\")')
+
+-- vim.api.nvim_set_keymap('i', '<C-TAB>', 'compe#complete()', {noremap = true, silent = true, expr = true})
+
+-- vim.cmd([[
+-- map p <Plug>(miniyank-autoput)
+-- map P <Plug>(miniyank-autoPut)
+-- map <leader>n <Plug>(miniyank-cycle)
+-- map <leader>N <Plug>(miniyank-cycleback)
+-- ]])

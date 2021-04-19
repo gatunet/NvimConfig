@@ -1,48 +1,45 @@
-local utils = require('utils')
+vim.cmd('set iskeyword+=-') -- treat dash separated words as a word text object"
+vim.cmd('set shortmess+=c') -- Don't pass messages to |ins-completion-menu|.
+vim.cmd('set inccommand=split') -- Make substitution work in realtime
+vim.cmd('set listchars=eol:¬,tab:─·,trail:~,extends:·,precedes:·,space:·') -- show special chars
+vim.o.hidden = O.hidden_files -- Required to keep multiple buffers open multiple buffers
+vim.o.title = true
+TERMINAL = vim.fn.expand('$TERMINAL')
+vim.cmd('let &titleold="'..TERMINAL..'"')
+vim.o.titlestring="%<%F%=%l/%L - nvim"
+vim.wo.wrap = O.wrap_lines -- Display long lines as just one line
+vim.cmd('set whichwrap+=<,>,[,],h,l') -- move to next line with theses keys
+vim.cmd('syntax on') -- move to next line with theses keys
+vim.o.pumheight = 10 -- Makes popup menu smaller
+vim.o.fileencoding = "utf-8" -- The encoding written to file
+vim.o.cmdheight = 2 -- More space for displaying messages
+vim.cmd('set colorcolumn=90') -- fix indentline for now !MODED
+vim.o.mouse = "a" -- Enable your mouse
+vim.o.splitbelow = true -- Horizontal splits will automatically be below
+vim.o.termguicolors = true -- set term giu colors most terminals support this
+vim.o.splitright = true -- Vertical splits will automatically be to the right
+vim.o.t_Co = "256" -- Support 256 colors
+vim.o.conceallevel = 0 -- So that I can see `` in markdown files
+vim.cmd('set ts=4') -- Insert 2 spaces for a tab
+vim.cmd('set sw=4') -- Change the number of space characters inserted for indentation
+vim.bo.expandtab = true -- Converts tabs to spaces
+vim.bo.smartindent = true -- Makes indenting smart
+vim.wo.number = O.number -- set numbered lines
+vim.wo.relativenumber = O.relative_number -- set relative number
+vim.wo.cursorline = true -- Enable highlighting of the current line
+vim.o.showtabline = 2 -- Always show tabs
+vim.o.showmode = false -- We don't need to see things like -- INSERT -- anymore
+vim.o.backup = false -- This is recommended by coc
+vim.o.writebackup = false -- This is recommended by coc
+vim.cmd('set undodir=home/gartunius/.config/nvim/undodir/')
+vim.wo.signcolumn = "yes" -- Always show the signcolumn, otherwise it would shift the text each time
+vim.o.updatetime = 300 -- Faster completion
+vim.o.timeoutlen = 100 -- By default timeoutlen is 1000 ms
+vim.o.clipboard = "unnamedplus" -- Copy paste between vim and everything else
+-- vim.o.guifont = "JetBrainsMono\\ Nerd\\ Font\\ Mono:h18"
+-- vim.o.guifont = "Hack\\ Nerd\\ Font\\ Mono"
+-- vim.o.guifont = "SauceCodePro Nerd Font:h17"
+-- vim.o.guifont = "FiraCode Nerd Font:h17"
+vim.o.guifont = "Ubuntu Mono"
 
-local cmd = vim.cmd
-local indent = 4
-
-cmd 'filetype plugin indent on'
-
--- Scopes o = global; b = buffer; w = window;
-utils.opt('o', 'hidden', true)
-utils.opt('o', 'scrolloff', 4 )
-utils.opt('o', 'smartcase', true)
-utils.opt('o', 'splitbelow', true)
-utils.opt('o', 'splitright', true)
-utils.opt('o', 'hlsearch', true)
-utils.opt('o', 'ignorecase', true)
-utils.opt('o', 'backspace', "indent,eol,start")
-utils.opt('o', 'scrolloff', 10)
-utils.opt('o', 'updatetime', 100)
-utils.opt('o', 'listchars', 'eol:¬,tab:─·,trail:~,extends:·,precedes:·,space:·')
-utils.opt('o', 'backup', false)
-utils.opt('o', 'undodir', "/home/chomuske/.config/nvim/undodir/")
-utils.opt('o', 'incsearch', true)
-utils.opt('o', 'cmdheight', 2)
-utils.opt('o', 'errorbells', false)
--- utils.opt('o', 'completeopt', "menuone,noselect,noinsert")
-utils.opt('o', 'completeopt', "noselect,menuone")
-utils.opt('o', 'lazyredraw', true)
-utils.opt('o', 'timeoutlen', 500)
-utils.opt('o', 'termguicolors', true)
--- utils.opt('o', 'shortmess', "+=c")
-
-utils.opt('b', 'expandtab', true)
-utils.opt('b', 'shiftwidth', indent)
-utils.opt('b', 'smartindent', true)
-utils.opt('b', 'tabstop', indent)
-utils.opt('b', 'softtabstop', indent)
-utils.opt('b', 'autoindent', true)
-utils.opt('b', 'shiftwidth', indent)
-utils.opt('b', 'swapfile', false)
-utils.opt('b', 'undofile', true)
-
-utils.opt('w', 'number', true)
-utils.opt('w', 'relativenumber', true)
-utils.opt('w', 'cursorline', true)
-utils.opt('w', 'scroll', 13) -- number of lines to scroll with <C-U> or <C-D>
-utils.opt('w', 'signcolumn', "yes:1")
-utils.opt('w', 'colorcolumn', "90")
-
+-- vim.o.guifont = "JetBrains\\ Mono\\ Regular\\ Nerd\\ Font\\ Complete"

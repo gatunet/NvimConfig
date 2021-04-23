@@ -35,9 +35,8 @@ return require("packer").startup(
         -- Packer can manage itself as an optional plugin
         use "wbthomason/packer.nvim"
 
-        -- TODO refactor all of this (for now it works, but yes I know it could be wrapped in a simpler function)
-        use {"neovim/nvim-lspconfig", opt = true}
-        use {"glepnir/lspsaga.nvim", opt = true}
+        -- Lsp
+        use {"neoclide/coc.nvim", branch = 'release'}
 
         -- Telescope
         use {"nvim-lua/popup.nvim", opt = true}
@@ -48,7 +47,6 @@ return require("packer").startup(
         use {'puremourning/vimspector', opt = true}
 
         -- Autocomplete
-        use {"hrsh7th/nvim-compe", opt = true}
         use {"hrsh7th/vim-vsnip", opt = true}
         use {"rafamadriz/friendly-snippets", opt = true}
         -- use {"codota/tabnine-vim", opt = true} -- Installed manually
@@ -78,6 +76,7 @@ return require("packer").startup(
 
         -- Color
         use {'sainnhe/sonokai', opt = true}
+        use {"norcalli/nvim-colorizer.lua", opt = true}
 
         -- Icons
         use {"kyazdani42/nvim-web-devicons", opt = true}
@@ -86,14 +85,11 @@ return require("packer").startup(
         use {'hoob3rt/lualine.nvim', opt = true}
         use {"romgrk/barbar.nvim", opt = true}
 
-        require_plugin("nvim-lspconfig")
-        require_plugin("lspsaga.nvim")
-        -- require_plugin("nvim-lspinstall")
+        require_plugin("coc.nvim")
         require_plugin("popup.nvim")
         require_plugin("plenary.nvim")
         require_plugin("telescope.nvim")
         require_plugin("vimspector")
-        require_plugin("nvim-compe")
         require_plugin("vim-vsnip")
         require_plugin("nvim-treesitter")
         require_plugin("nvim-ts-autotag")
@@ -112,6 +108,6 @@ return require("packer").startup(
         require_plugin("vim-tmux-navigator")
         require_plugin("comfortable-motion.vim")
         require_plugin("vim-maximizer")
-        -- require_plugin("tabnine-vim")
+        require_plugin("nvim-colorizer.lua")
     end
 )

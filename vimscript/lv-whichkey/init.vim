@@ -116,25 +116,42 @@ let g:which_key_map.g = {
       \ 'u' : [':UndoStageHunk'                    , 'undo stage hunk'],
       \ }
 
-" l is for language server protocol
-let g:which_key_map.l = {
-      \ 'name' : '+lsp' ,
-      \ 'a' : [':Lspsaga code_action'                , 'code action'],
-      \ 'A' : [':Lspsaga range_code_action'          , 'selected action'],
-      \ 'd' : [':Telescope lsp_document_diagnostics' , 'document diagnostics'],
-      \ 'D' : [':Telescope lsp_workspace_diagnostics', 'workspace diagnostics'],
-      \ 'f' : [':LspFormatting'                      , 'format'],
-      \ 'I' : [':LspInfo'                            , 'lsp info'],
-      \ 'v' : [':LspVirtualTextToggle'               , 'lsp toggle virtual text'],
-      \ 'l' : [':Lspsaga lsp_finder'                 , 'lsp finder'],
-      \ 'L' : [':Lspsaga show_line_diagnostics'      , 'line_diagnostics'],
-      \ 'p' : [':Lspsaga preview_definition'         , 'preview definition'],
-      \ 'q' : [':Telescope quickfix'                 , 'quickfix'],
-      \ 'r' : [':Lspsaga rename'                     , 'rename'],
-      \ 'T' : [':LspTypeDefinition'                  , 'type defintion'],
-      \ 'x' : [':cclose'                             , 'close quickfix'],
-      \ 's' : [':Telescope lsp_document_symbols'     , 'document symbols'],
-      \ 'S' : [':Telescope lsp_workspace_symbols'    , 'workspace symbols'],
+" c if for coc
+let g:which_key_map.c = {
+      \ 'name' : '+COC' ,
+      \ 'p' : ['<Plug>(coc-diagnostic-prev)'       , 'previous diagnostic'],
+      \ 'n' : ['<Plug>(coc-diagnostic-next)'       , 'next diagnostic'],
+      \ 'e' : ['<Plug>(coc-definition)'            , 'goto definition'],
+      \ 'y' : ['<Plug>(coc-type-definition)'       , 'goto type definition'],
+      \ 'i' : ['<Plug>(coc-implementation)'        , 'goto implementation definition'],
+      \ 'g' : ['<Plug>(coc-references)'            , 'goto references definition'],
+      \ 'd' : [':call <SID>show_documentation()'   , 'show documentation'],
+      \ 'r' : ['<Plug>(coc-rename)'                , 'rename'],
+      \ 'f' : ['<Plug>(coc-format-selected)'       , 'format selected'],
+      \ 'a' : ['<Plug>(coc-codeaction-selected)'   , 'code action selected'],
+      \ 'o' : ['<Plug>(coc-codeaction)'            , 'code action'],
+      \ 'k' : ['<Plug>(coc-fix-current)'           , 'auto fix problem om current line'],
       \ }
+
+" l is for language server protocol
+" let g:which_key_map.l = {
+"       \ 'name' : '+lsp' ,
+"       \ 'a' : [':Lspsaga code_action'                , 'code action'],
+"       \ 'A' : [':Lspsaga range_code_action'          , 'selected action'],
+"       \ 'd' : [':Telescope lsp_document_diagnostics' , 'document diagnostics'],
+"       \ 'D' : [':Telescope lsp_workspace_diagnostics', 'workspace diagnostics'],
+"       \ 'f' : [':LspFormatting'                      , 'format'],
+"       \ 'I' : [':LspInfo'                            , 'lsp info'],
+"       \ 'v' : [':LspVirtualTextToggle'               , 'lsp toggle virtual text'],
+"       \ 'l' : [':Lspsaga lsp_finder'                 , 'lsp finder'],
+"       \ 'L' : [':Lspsaga show_line_diagnostics'      , 'line_diagnostics'],
+"       \ 'p' : [':Lspsaga preview_definition'         , 'preview definition'],
+"       \ 'q' : [':Telescope quickfix'                 , 'quickfix'],
+"       \ 'r' : [':Lspsaga rename'                     , 'rename'],
+"       \ 'T' : [':LspTypeDefinition'                  , 'type defintion'],
+"       \ 'x' : [':cclose'                             , 'close quickfix'],
+"       \ 's' : [':Telescope lsp_document_symbols'     , 'document symbols'],
+"       \ 'S' : [':Telescope lsp_workspace_symbols'    , 'workspace symbols'],
+"       \ }
 
 call which_key#register('<Space>', "g:which_key_map")

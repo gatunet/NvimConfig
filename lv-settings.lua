@@ -10,7 +10,7 @@ an executable
 -- general
 O.auto_complete = true
 O.colorscheme = 'sonokai'
-O.auto_close_tree = 0
+O.auto_close_tree = 1
 O.wrap_lines = false
 
 -- if you don't want all the parsers change this to a table of the ones you want

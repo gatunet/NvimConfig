@@ -38,7 +38,7 @@ vim.lsp.protocol.CompletionItemKind = {
     "   (Function)",
     "   (Constructor)",
     " ﴲ  (Field)",
-    "[] (Variable)",
+    "   (Variable)",
     "   (Class)",
     " ﰮ  (Interface)",
     "   (Module)",

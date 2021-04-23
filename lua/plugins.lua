@@ -51,6 +51,7 @@ return require("packer").startup(
         use {"hrsh7th/nvim-compe", opt = true}
         use {"hrsh7th/vim-vsnip", opt = true}
         use {"rafamadriz/friendly-snippets", opt = true}
+        -- use {"codota/tabnine-vim", opt = true} -- Installed manually
 
         -- Treesitter
         use {"nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}
@@ -64,13 +65,16 @@ return require("packer").startup(
         use {'christoomey/vim-tmux-navigator', opt = true}
 
         -- use {'lukas-reineke/indent-blankline.nvim', opt=true, branch = 'lua'}
-        use {"lewis6991/gitsigns.nvim", opt = true}
         use {"liuchengxu/vim-which-key", opt = true}
         use {"ChristianChiarulli/dashboard-nvim", opt = true}
         use {"windwp/nvim-autopairs", opt = true}
         use {"terrortylor/nvim-comment", opt = true}
         use {"kevinhwang91/nvim-bqf", opt = true}
-		use { 'yuttie/comfortable-motion.vim', opt = true }
+        use {"yuttie/comfortable-motion.vim", opt = true}
+        use {"szw/vim-maximizer", opt = true}
+
+        -- Git
+        use {"airblade/vim-gitgutter", opt = true}
 
         -- Color
         use {'sainnhe/sonokai', opt = true}
@@ -84,7 +88,7 @@ return require("packer").startup(
 
         require_plugin("nvim-lspconfig")
         require_plugin("lspsaga.nvim")
-        require_plugin("nvim-lspinstall")
+        -- require_plugin("nvim-lspinstall")
         require_plugin("popup.nvim")
         require_plugin("plenary.nvim")
         require_plugin("telescope.nvim")
@@ -95,7 +99,7 @@ return require("packer").startup(
         require_plugin("nvim-ts-autotag")
         require_plugin("nvim-ts-rainbow")
         require_plugin("nvim-tree.lua")
-        require_plugin("gitsigns.nvim")
+        require_plugin("vim-gitgutter")
         require_plugin("vim-which-key")
         require_plugin("dashboard-nvim")
         require_plugin("nvim-autopairs")
@@ -107,5 +111,7 @@ return require("packer").startup(
         require_plugin("barbar.nvim")
         require_plugin("vim-tmux-navigator")
         require_plugin("comfortable-motion.vim")
+        require_plugin("vim-maximizer")
+        -- require_plugin("tabnine-vim")
     end
 )

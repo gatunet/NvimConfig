@@ -28,7 +28,7 @@ let g:which_key_map['e'] = [ ':NvimTreeToggle'                                 ,
 let g:which_key_map['f'] = [ ':Telescope find_files'                           , 'find files' ]
 let g:which_key_map['h'] = [ '<C-W>s'                                          , 'split below']
 let g:which_key_map['H'] = [ ':let @/ = ""'                                    , 'no highlight' ]
-let g:which_key_map['r'] = [ ':RnvimrToggle'                                   , 'ranger' ]
+let g:which_key_map['m'] = [ ':MaximizerToggle'                                , 'maximizer' ]
 " TODO create entire treesitter section
 let g:which_key_map['v'] = [ '<C-W>v'                                          , 'split right']
 " TODO play nice with status line

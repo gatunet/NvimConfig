@@ -50,12 +50,13 @@ let g:which_key_map.b = {
 " d is for debug
 let g:which_key_map.d = {
       \ 'name' : '+debug' ,
-      \ 'b' : ['DebugToggleBreakpoint '        , 'toggle breakpoint'],
-      \ 'c' : ['DebugContinue'                 , 'continue'],
-      \ 'i' : ['DebugStepInto'                 , 'step into'],
-      \ 'o' : ['DebugStepOver'                 , 'step over'],
-      \ 'r' : ['DebugToggleRepl'               , 'toggle repl'],
-      \ 's' : ['DebugStart'                    , 'start'],
+      \ 'b' : ['<Plug>VimspectorToggleBreakpoint'             , 'toggle breakpoint'],
+      \ 'c' : ['<Plug>VimspectorContinue'                     , 'continue'],
+      \ 'i' : ['<Plug>VimspectorStepInto'                     , 'step into'],
+      \ 'o' : ['<Plug>VimspectorStepOver'                     , 'step over'],
+      \ 'r' : ['<Plug>VimspectorToggleConditionalBreakpoint'  , 'toggle repl'],
+      \ 's' : ['<Plug>VimspectorContinue'                     , 'start'],
+      \ 'q' : [':VimspectorReset'                             , 'quit'],
       \ }
 
 " F is for fold

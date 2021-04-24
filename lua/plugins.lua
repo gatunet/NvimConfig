@@ -77,6 +77,7 @@ return require("packer").startup(
         -- Color
         use {'sainnhe/sonokai', opt = true}
         use {"norcalli/nvim-colorizer.lua", opt = true}
+        use {"mboughaba/i3config.vim", opt = true}
 
         -- Icons
         use {"kyazdani42/nvim-web-devicons", opt = true}
@@ -109,5 +110,6 @@ return require("packer").startup(
         require_plugin("comfortable-motion.vim")
         require_plugin("vim-maximizer")
         require_plugin("nvim-colorizer.lua")
+        require_plugin("i3config.vim")
     end
 )

@@ -12,6 +12,7 @@ vim.wo.listchars = "eol:¬,tab:─·,trail:~,extends:·,precedes:·,space:·,"
 vim.wo.signcolumn = "yes"
 vim.wo.colorcolumn = "90"
 vim.o.cmdheight = 2
+vim.o.showmode = false
 
 -- Search
 vim.o.ignorecase = true
@@ -39,3 +40,4 @@ vim.bo.undofile = true
 -- Other settings
 vim.o.updatetime = 300
 vim.o.termguicolors = true
+vim.o.clipboard = "unnamedplus"

@@ -1,42 +1,41 @@
-vim.cmd('set iskeyword+=-') -- treat dash separated words as a word text object"
-vim.cmd('set shortmess+=c') -- Don't pass messages to |ins-completion-menu|.
-vim.cmd('set inccommand=split') -- Make substitution work in realtime
-vim.cmd('set list lcs=eol:¬,tab:─·,trail:~,extends:·,precedes:·,space:·,') -- show special chars
-vim.o.hidden = O.hidden_files -- Required to keep multiple buffers open multiple buffers
-vim.o.title = true
-TERMINAL = vim.fn.expand('$TERMINAL')
-vim.cmd('let &titleold="'..TERMINAL..'"')
-vim.o.titlestring="%<%F%=%l/%L - nvim"
-vim.wo.wrap = O.wrap_lines -- Display long lines as just one line
-vim.cmd('set whichwrap+=<,>,[,],h,l') -- move to next line with theses keys
-vim.cmd('syntax on') -- move to next line with theses keys
-vim.o.pumheight = 10 -- Makes popup menu smaller
-vim.o.fileencoding = "utf-8" -- The encoding written to file
-vim.o.cmdheight = 2 -- More space for displaying messages
-vim.cmd('set colorcolumn=90') -- fix indentline for now !MODED
-vim.o.mouse = "a" -- Enable your mouse
-vim.o.splitbelow = true -- Horizontal splits will automatically be below
-vim.o.termguicolors = true -- set term giu colors most terminals support this
-vim.o.splitright = true -- Vertical splits will automatically be to the right
-vim.o.t_Co = "256" -- Support 256 colors
-vim.o.conceallevel = 0 -- So that I can see `` in markdown files
-vim.cmd('set ts=4') -- Insert 2 spaces for a tab
-vim.cmd('set sw=4') -- Change the number of space characters inserted for indentation
-vim.bo.expandtab = true -- Converts tabs to spaces
-vim.bo.smartindent = true -- Makes indenting smart
-vim.wo.number = O.number -- set numbered lines
-vim.wo.relativenumber = O.relative_number -- set relative number
-vim.wo.cursorline = true -- Enable highlighting of the current line
-vim.o.showtabline = 2 -- Always show tabs
-vim.o.showmode = false -- We don't need to see things like -- INSERT -- anymore
-vim.o.backup = false -- This is recommended by coc
-vim.o.writebackup = false -- This is recommended by coc
-vim.cmd('set undodir=home/gartunius/.config/nvim/undodir/')
-vim.wo.signcolumn = "yes" -- Always show the signcolumn, otherwise it would shift the text each time
-vim.o.updatetime = 300 -- Faster completion
-vim.o.timeoutlen = 100 -- By default timeoutlen is 1000 ms
-vim.o.clipboard = "unnamedplus" -- Copy paste between vim and everything else
-vim.o.guifont = "Ubuntu Mono"
-vim.o.ignorecase = true
-vim.o.scrolloff = 10
+-- vim.api.nvim_set_option('', )
+-- vim.o.{option}: global options
+-- vim.bo.{option}: buffer-local options
+-- vim.wo.{option}: window-local options
 
+-- Visual artifacts
+vim.wo.number = true
+vim.wo.relativenumber = true
+vim.wo.cursorline = true
+vim.wo.list = true
+vim.wo.listchars = "eol:¬,tab:─·,trail:~,extends:·,precedes:·,space:·,"
+vim.wo.signcolumn = "yes"
+vim.wo.colorcolumn = "90"
+vim.o.cmdheight = 2
+
+-- Search
+vim.o.ignorecase = true
+vim.o.smartcase = true
+
+-- Moving helpers
+vim.o.scrolloff = 10
+vim.wo.scroll = 20
+vim.o.splitright = true
+vim.o.splitbelow = true
+
+-- Indent configs
+vim.bo.smartindent = true
+vim.bo.tabstop = 4 -- number of spaces that a <tab> counts for
+vim.bo.shiftwidth = 4 -- number of spaces for each '>>'
+vim.bo.softtabstop = 4 -- number of spaces that a <tab> counts for when performing editing operations
+vim.bo.expandtab = true -- use the appropriate number of spaces to insert a <tab>
+
+--Files
+vim.bo.swapfile = false
+vim.o.backup = false
+vim.o.undodir = "~/.config/nvim/undodir"
+vim.bo.undofile = true
+
+-- Other settings
+vim.o.updatetime = 300
+vim.o.termguicolors = true

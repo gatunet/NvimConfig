@@ -16,3 +16,9 @@ vim.api.nvim_set_keymap('n', 'W', '<cmd>w<CR>', { noremap = true }) -- quick sav
 vim.api.nvim_set_keymap('n', 'C', '<cmd>nohl<CR>', { noremap = true }) -- quick save
 
 vim.api.nvim_set_keymap('n', '<Leader>t', '<cmd>terminal<CR>', { noremap = true }) -- quick terminal
+
+-- Nvim Tree
+vim.api.nvim_set_keymap('n', '<Leader>e', '<cmd>:NvimTreeToggle<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<Leader>r', '<cmd>:NvimTreeRefresh<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<Leader>n', '<cmd>:NvimTreeFindFile<CR>', { noremap = true })
+

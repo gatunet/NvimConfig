@@ -8,6 +8,13 @@ return require('packer').startup(function()
 
   -- Treesitter
   use { "nvim-treesitter/nvim-treesitter", run = ':TSUpdate'}
-  use { "p00f/nvim-ts-rainbow" }
+  use { "p00f/nvim-ts-rainbow",
+    requires = {"nvim-treesitter/nvim-treesitter"}
+  }
+
+  -- File explorer
+  use { "kyazdani42/nvim-tree.lua",
+    equires = { "kyazdani42/nvim-web-devicons" }
+  }
 
 end)

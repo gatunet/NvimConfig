@@ -14,7 +14,12 @@ return require('packer').startup(function()
 
   -- File explorer
   use { "kyazdani42/nvim-tree.lua",
-    equires = { "kyazdani42/nvim-web-devicons" }
+    requires = { "kyazdani42/nvim-web-devicons" }
   }
+
+  -- Buffers
+  --use { "romgrk/barbar.nvim",
+   -- requires = { "kyazdani42/nvim-web-devicons" }
+  --}
 
 end)

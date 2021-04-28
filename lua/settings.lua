@@ -1,7 +1,13 @@
+-- Using a call to the "traditional" way, tobe changed when the new way works properly.
+
 -- vim.api.nvim_set_option('', )
 -- vim.o.{option}: global options
 -- vim.bo.{option}: buffer-local options
 -- vim.wo.{option}: window-local options
+
+-- vim.api.nvim_set_option()
+-- vim.api.nvim_buf_set_option()
+-- vim.api.nvim_win_set_option()
 
 -- Visual artifacts
 vim.wo.number = true
@@ -41,3 +47,33 @@ vim.bo.undofile = true
 vim.o.updatetime = 300
 vim.o.termguicolors = true
 vim.o.clipboard = "unnamedplus"
+
+--vim.cmd([[
+--set number
+--set relativenumber
+--set cursorline
+--set list
+--set listchars=eol:¬,tab:─·,trail:~,extends:·,precedes:·,space:·,
+--set signcolumn=yes
+--set colorcolumn=90
+--set cmdheight=2
+--set noshowmode
+--set ignorecase
+--set smartcase
+--set scrolloff=10
+--set scroll=20
+--set splitright
+--set splitbelow
+--set smartindent
+--set tabstop=4
+--set shiftwidth=4
+--set softtabstop=4
+--set expandtab
+--set noswapfile
+--set nobackup
+--set undodir=~/.config/nvim/undodir
+--set undofile
+--set updatetime=300
+--set termguicolors
+--set clipboard=unnamedplus
+--]])

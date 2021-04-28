@@ -3,24 +3,22 @@ vim.g.nvim_tree_width = 35
 vim.g.nvim_tree_auto_close = 1
 vim.g.nvim_tree_hide_dotfiles = 0
 vim.g.nvim_tree_indent_markers = 1
-vim.g.nvim_tree_disable_netrw = 1
 
 local tree_cb = require'nvim-tree.config'.nvim_tree_callback
 vim.g.nvim_tree_bindings = {
--- default mappings
 ["<CR>"]           = tree_cb("edit"),
 ["o"]              = tree_cb("edit"),
-["l"]              = tree_cb("edit"),
+-- ["l"]              = tree_cb("edit"),
 ["<2-LeftMouse>"]  = tree_cb("edit"),
 ["<2-RightMouse>"] = tree_cb("cd"),
 ["<C-]>"]          = tree_cb("cd"),
 ["<C-v>"]          = tree_cb("vsplit"),
 ["<C-x>"]          = tree_cb("split"),
-["<C-t>"]          = tree_cb("tabnew"),
+["l"]              = tree_cb("tabnew"),
 ["<"]              = tree_cb("prev_sibling"),
 [">"]              = tree_cb("next_sibling"),
 ["<BS>"]           = tree_cb("close_node"),
-["h"]           = tree_cb("close_node"),
+["h"]              = tree_cb("close_node"),
 ["<S-CR>"]         = tree_cb("close_node"),
 ["<Tab>"]          = tree_cb("preview"),
 ["H"]              = tree_cb("toggle_ignored"),
@@ -37,7 +35,7 @@ vim.g.nvim_tree_bindings = {
 ["]c"]             = tree_cb("next_git_item"),
 ["-"]              = tree_cb("dir_up"),
 ["q"]              = tree_cb("close"),
-    }
+}
 
 vim.g.nvim_tree_icons = {
     default = ' ',

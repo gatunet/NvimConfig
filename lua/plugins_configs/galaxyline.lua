@@ -86,7 +86,7 @@ gls.left[4] = {
     DiffAdd = {
         provider = 'DiffAdd',
         condition = condition.hide_in_width,
-        icon = '  ',
+        icon = '+',
         highlight = {colors.green, colors.bg}
     }
 }
@@ -94,7 +94,7 @@ gls.left[5] = {
     DiffModified = {
         provider = 'DiffModified',
         condition = condition.hide_in_width,
-        icon = ' 柳',
+        icon = '~',
         highlight = {colors.blue, colors.bg}
     }
 }
@@ -102,7 +102,7 @@ gls.left[6] = {
     DiffRemove = {
         provider = 'DiffRemove',
         condition = condition.hide_in_width,
-        icon = '  ',
+        icon = '-',
         highlight = {colors.red, colors.bg}
     }
 }

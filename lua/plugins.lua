@@ -21,7 +21,10 @@ return require('packer').startup(function()
   use { 'lewis6991/gitsigns.nvim',
     requires = { 'nvim-lua/plenary.nvim' }
   }
-
+  use {
+    'nvim-telescope/telescope.nvim',
+    requires = {{'nvim-lua/popup.nvim'}, {'nvim-lua/plenary.nvim'}}
+  }
   -- Better editing
   use { "windwp/nvim-autopairs" }
   use { "terrortylor/nvim-comment" }

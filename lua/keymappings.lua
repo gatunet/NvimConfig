@@ -18,31 +18,35 @@ vim.api.nvim_set_keymap('n', 'C', '<cmd>nohl<CR>', { noremap = true }) -- quick 
 vim.api.nvim_set_keymap('n', '<Leader>t', '<cmd>terminal<CR>', { noremap = true }) -- quick terminal
 
 -- Nvim Tree
-vim.api.nvim_set_keymap('n', '<Leader>e', '<cmd>:NvimTreeToggle<CR>', { noremap = true })
-vim.api.nvim_set_keymap('n', '<Leader>r', '<cmd>:NvimTreeRefresh<CR>', { noremap = true })
-vim.api.nvim_set_keymap('n', '<Leader>n', '<cmd>:NvimTreeFindFile<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<Leader>e', '<cmd>NvimTreeToggle<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<Leader>r', '<cmd>NvimTreeRefresh<CR>', { noremap = true })
+vim.api.nvim_set_keymap('n', '<Leader>n', '<cmd>NvimTreeFindFile<CR>', { noremap = true })
 
 -- Barbar
-vim.api.nvim_set_keymap('n', '<Space>bd', ':BufferOrderByDirectory<CR>', default_opts)
-vim.api.nvim_set_keymap('n', '<Space>bl', ':BufferOrderByLanguage<CR>',  default_opts)
-vim.api.nvim_set_keymap('n', '<A-.>',     ':BufferPrevious<CR>',         default_opts)
-vim.api.nvim_set_keymap('n', '<A-;>',     ':BufferNext<CR>',             default_opts)
-vim.api.nvim_set_keymap('n', '<A-<>',     ':BufferMovePrevious<CR>',     default_opts)
-vim.api.nvim_set_keymap('n', '<A->>',     ':BufferMoveNext<CR>',         default_opts)
-vim.api.nvim_set_keymap('n', '<A-1>',     ':BufferGoto 1<CR>',           default_opts)
-vim.api.nvim_set_keymap('n', '<A-2>',     ':BufferGoto 2<CR>',           default_opts)
-vim.api.nvim_set_keymap('n', '<A-3>',     ':BufferGoto 3<CR>',           default_opts)
-vim.api.nvim_set_keymap('n', '<A-4>',     ':BufferGoto 4<CR>',           default_opts)
-vim.api.nvim_set_keymap('n', '<A-5>',     ':BufferGoto 5<CR>',           default_opts)
-vim.api.nvim_set_keymap('n', '<A-6>',     ':BufferGoto 6<CR>',           default_opts)
-vim.api.nvim_set_keymap('n', '<A-7>',     ':BufferGoto 7<CR>',           default_opts)
-vim.api.nvim_set_keymap('n', '<A-8>',     ':BufferGoto 8<CR>',           default_opts)
-vim.api.nvim_set_keymap('n', '<A-9>',     ':BufferLast<CR>',             default_opts)
-vim.api.nvim_set_keymap('n', '<A-c>',     ':BufferClose<CR>',            default_opts)
+vim.api.nvim_set_keymap('n', '<Space>bd', '<cmd>BufferOrderByDirectory<CR>', default_opts)
+vim.api.nvim_set_keymap('n', '<Space>bl', '<cmd>BufferOrderByLanguage<CR>',  default_opts)
+vim.api.nvim_set_keymap('n', '<A-.>',     '<cmd>BufferPrevious<CR>',         default_opts)
+vim.api.nvim_set_keymap('n', '<A-;>',     '<cmd>BufferNext<CR>',             default_opts)
+vim.api.nvim_set_keymap('n', '<A-<>',     '<cmd>BufferMovePrevious<CR>',     default_opts)
+vim.api.nvim_set_keymap('n', '<A->>',     '<cmd>BufferMoveNext<CR>',         default_opts)
+vim.api.nvim_set_keymap('n', '<A-1>',     '<cmd>BufferGoto 1<CR>',           default_opts)
+vim.api.nvim_set_keymap('n', '<A-2>',     '<cmd>BufferGoto 2<CR>',           default_opts)
+vim.api.nvim_set_keymap('n', '<A-3>',     '<cmd>BufferGoto 3<CR>',           default_opts)
+vim.api.nvim_set_keymap('n', '<A-4>',     '<cmd>BufferGoto 4<CR>',           default_opts)
+vim.api.nvim_set_keymap('n', '<A-5>',     '<cmd>BufferGoto 5<CR>',           default_opts)
+vim.api.nvim_set_keymap('n', '<A-6>',     '<cmd>BufferGoto 6<CR>',           default_opts)
+vim.api.nvim_set_keymap('n', '<A-7>',     '<cmd>BufferGoto 7<CR>',           default_opts)
+vim.api.nvim_set_keymap('n', '<A-8>',     '<cmd>BufferGoto 8<CR>',           default_opts)
+vim.api.nvim_set_keymap('n', '<A-9>',     '<cmd>BufferLast<CR>',             default_opts)
+vim.api.nvim_set_keymap('n', '<A-c>',     '<cmd>BufferClose<CR>',            default_opts)
 
 -- Maximazer
-vim.api.nvim_set_keymap('n', '<Leader>m',     ':MaximizerToggle<CR>',    default_opts)
+vim.api.nvim_set_keymap('n', '<Leader>m',     '<cmd>MaximizerToggle<CR>',    default_opts)
 
 -- Comment
-vim.api.nvim_set_keymap('n', '<Leader>/',     ':CommentToggle<CR>',      default_opts)
+vim.api.nvim_set_keymap('n', '<Leader>/',     '<cmd>CommentToggle<CR>',      default_opts)
+vim.api.nvim_set_keymap('v', '<Leader>/',     '<cmd>CommentToggle<CR>',      default_opts)
+
+-- Telescope
+vim.api.nvim_set_keymap('n', '<Leader>f',     '<cmd>Telescope find_files<CR>',  default_opts)
 

@@ -31,4 +31,6 @@ return require('packer').startup(function()
   -- Tmux
   use { "christoomey/vim-tmux-navigator" }
 
+  use { "glepnir/galaxyline.nvim" }
+
 end)

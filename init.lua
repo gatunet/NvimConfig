@@ -23,5 +23,6 @@ require('plugins_configs.autopairs')
 require('plugins_configs.colorizer')
 require('plugins_configs.nvim_comment')
 require('plugins_configs.comfortable_motion')
+require('plugins_configs.galaxyline')
 
 vim.cmd("source /home/gartunius/.config/nvim/vimscript/settings.vim")

@@ -3,23 +3,32 @@ return require('packer').startup(function()
   -- Packer can manage itself
   use 'wbthomason/packer.nvim'
 
-  -- Colorscheme
+  -- Colors
   use { 'sainnhe/sonokai' }
-
-  -- Treesitter
   use { "nvim-treesitter/nvim-treesitter", run = ':TSUpdate'}
   use { "p00f/nvim-ts-rainbow",
     requires = {"nvim-treesitter/nvim-treesitter"}
   }
+  use { "norcalli/nvim-colorizer.lua" }
 
-  -- File explorer
+  -- Files
   use { "kyazdani42/nvim-tree.lua",
     requires = { "kyazdani42/nvim-web-devicons" }
   }
+  use { "romgrk/barbar.nvim",
+    requires = { "kyazdani42/nvim-web-devicons" }
+  }
+  use { 'lewis6991/gitsigns.nvim',
+    requires = { 'nvim-lua/plenary.nvim' }
+  }
 
-  -- Buffers
-  --use { "romgrk/barbar.nvim",
-   -- requires = { "kyazdani42/nvim-web-devicons" }
-  --}
+  -- Better editing
+  use { "windwp/nvim-autopairs" }
+  use { "terrortylor/nvim-comment" }
+  use { "szw/vim-maximizer" }
+  use { "yuttie/comfortable-motion.vim" }
+
+  -- Tmux
+  use { "christoomey/vim-tmux-navigator" }
 
 end)

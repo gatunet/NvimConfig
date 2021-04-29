@@ -39,3 +39,10 @@ vim.api.nvim_set_keymap('n', '<A-7>',     ':BufferGoto 7<CR>',           default
 vim.api.nvim_set_keymap('n', '<A-8>',     ':BufferGoto 8<CR>',           default_opts)
 vim.api.nvim_set_keymap('n', '<A-9>',     ':BufferLast<CR>',             default_opts)
 vim.api.nvim_set_keymap('n', '<A-c>',     ':BufferClose<CR>',            default_opts)
+
+-- Maximazer
+vim.api.nvim_set_keymap('n', '<Leader>m',     ':MaximizerToggle<CR>',    default_opts)
+
+-- Comment
+vim.api.nvim_set_keymap('n', '<Leader>/',     ':CommentToggle<CR>',      default_opts)
+

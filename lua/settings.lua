@@ -40,40 +40,10 @@ vim.bo.expandtab = true -- use the appropriate number of spaces to insert a <tab
 --Files
 vim.bo.swapfile = false
 vim.o.backup = false
-vim.o.undodir = "~/.config/nvim/undodir"
+vim.o.undodir = "/home/gartunius/.config/nvim/undodir"
 vim.bo.undofile = true
 
 -- Other settings
 vim.o.updatetime = 300
 vim.o.termguicolors = true
 vim.o.clipboard = "unnamedplus"
-
---vim.cmd([[
---set number
---set relativenumber
---set cursorline
---set list
---set listchars=eol:¬,tab:─·,trail:~,extends:·,precedes:·,space:·,
---set signcolumn=yes
---set colorcolumn=90
---set cmdheight=2
---set noshowmode
---set ignorecase
---set smartcase
---set scrolloff=10
---set scroll=20
---set splitright
---set splitbelow
---set smartindent
---set tabstop=4
---set shiftwidth=4
---set softtabstop=4
---set expandtab
---set noswapfile
---set nobackup
---set undodir=~/.config/nvim/undodir
---set undofile
---set updatetime=300
---set termguicolors
---set clipboard=unnamedplus
---]])

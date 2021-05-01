@@ -2,8 +2,8 @@ local gl = require('galaxyline')
 -- get my theme in galaxyline repo
 -- local colors = require('galaxyline.theme').default
 local colors = {
-    -- bg = '#2E2E2E',
-    bg = '#1a181a',
+    bg = '#2E2E2E',
+    -- bg = '#1a181a',
     yellow = '#e5c463',
     dark_yellow = '#e5c463',
     cyan = '#78dce8',
@@ -95,7 +95,7 @@ gls.left[5] = {
         provider = 'DiffModified',
         condition = condition.hide_in_width,
         icon = '~',
-        highlight = {colors.blue, colors.bg}
+        highlight = {colors.cyan, colors.bg}
     }
 }
 gls.left[6] = {
@@ -126,7 +126,7 @@ gls.right[5] = {
             if tbl[vim.bo.filetype] then return false end
             return true
         end,
-        icon = ' ',
+        icon = '  ',
         highlight = {colors.grey, colors.bg}
     }
 }

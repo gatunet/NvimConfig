@@ -26,4 +26,5 @@ require('plugins_configs.comfortable_motion')
 require('plugins_configs.galaxyline')
 require('plugins_configs.telescope')
 
+vim.cmd("source /home/gartunius/.config/nvim/vimscript/coc.vim")
 vim.cmd("source /home/gartunius/.config/nvim/vimscript/settings.vim")

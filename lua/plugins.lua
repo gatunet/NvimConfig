@@ -8,6 +8,7 @@ return require('packer').startup(function()
   use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}
   use { "p00f/nvim-ts-rainbow", requires = {"nvim-treesitter/nvim-treesitter"} }
   use { "norcalli/nvim-colorizer.lua" }
+  use { "mboughaba/i3config.vim" }
 
   -- Files
   use { "kyazdani42/nvim-tree.lua", requires = { "kyazdani42/nvim-web-devicons" } }
@@ -26,6 +27,10 @@ return require('packer').startup(function()
   -- Tmux
   use { "christoomey/vim-tmux-navigator" }
 
+  -- Statusline
   use { "glepnir/galaxyline.nvim" }
+
+  -- Debuggin
+  use { "puremourning/vimspector" }
 
 end)

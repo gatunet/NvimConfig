@@ -118,18 +118,18 @@ gls.right[3] = {
 
 gls.right[4] = {DiagnosticInfo = {provider = 'DiagnosticInfo', icon = '  ', highlight = {colors.info_yellow, colors.bg}}}
 
-gls.right[5] = {
-    ShowLspClient = {
-        provider = 'GetLspClient',
-        condition = function()
-            local tbl = {['dashboard'] = true, [' '] = true}
-            if tbl[vim.bo.filetype] then return false end
-            return true
-        end,
-        icon = '  ',
-        highlight = {colors.grey, colors.bg}
-    }
-}
+-- gls.right[5] = {
+--     ShowLspClient = {
+--         provider = 'GetLspClient',
+--         condition = function()
+--             local tbl = {['dashboard'] = true, [' '] = true}
+--             if tbl[vim.bo.filetype] then return false end
+--             return true
+--         end,
+--         icon = '  ',
+--         highlight = {colors.grey, colors.bg}
+--     }
+-- }
 
 gls.right[6] = {
     LineInfo = {

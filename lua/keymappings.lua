@@ -12,13 +12,15 @@ vim.api.nvim_set_keymap('n', '<C-k>', '<cmd>wincmd k<CR>', default_opts)
 vim.api.nvim_set_keymap('n', '<C-l>', '<cmd>wincmd l<CR>', default_opts)
 
 vim.api.nvim_set_keymap('n', '<Leader>w', '<cmd>w<CR>', { noremap = true }) -- quick save
+vim.api.nvim_set_keymap('n', '<Leader>v', '<cmd>vsplit<CR>', { noremap = true }) -- quick vertical split
+vim.api.nvim_set_keymap('n', '<Leader>s', '<cmd>split<CR>', { noremap = true }) -- quick horizontal split
 
 vim.api.nvim_set_keymap('n', '<Leader>t', '<cmd>terminal<CR>', { noremap = true }) -- quick terminal
 
 -- Nvim Tree
 vim.api.nvim_set_keymap('n', '<Leader>e', '<cmd>NvimTreeToggle<CR>', { noremap = true })
 vim.api.nvim_set_keymap('n', '<Leader>r', '<cmd>NvimTreeRefresh<CR>', { noremap = true })
-vim.api.nvim_set_keymap('n', '<Leader>n', '<cmd>NvimTreeFindFile<CR>', { noremap = true })
+-- vim.api.nvim_set_keymap('n', '<Leader>n', '<cmd>NvimTreeFindFile<CR>', { noremap = true })
 
 -- Barbar
 vim.api.nvim_set_keymap('n', '<Space>bd', '<cmd>BufferOrderByDirectory<CR>', default_opts)
@@ -46,7 +48,7 @@ vim.api.nvim_set_keymap("n", "<leader>/", ":CommentToggle<CR>", {noremap = true,
 vim.api.nvim_set_keymap("v", "<leader>/", ":CommentToggle<CR>", {noremap = true, silent = true})
 -- Telescope
 vim.api.nvim_set_keymap('n', '<Leader>f',     '<cmd>Telescope find_files<CR>',  default_opts)
-vim.api.nvim_set_keymap('n', '<Leader>w',     '<cmd>Telescope live_grep<CR>',  default_opts)
+vim.api.nvim_set_keymap('n', '<Leader>g',     '<cmd>Telescope live_grep<CR>',  default_opts)
 
 -- Coc
 vim.api.nvim_set_keymap('n', '<Leader>d', '<Plug>(coc-definition)<CR>'            , default_opts)
@@ -62,3 +64,8 @@ vim.api.nvim_set_keymap('n', '<Leader>c', '<Plug>(coc-codeaction-selected)<CR>' 
 -- vim.api.nvim_set_keymap('n', '', '<Plug>(coc-format-selected)'       , 'format selected', default_opts)
 -- vim.api.nvim_set_keymap('n', '', '<plug>(coc-codeaction)'            , 'code action', default_opts)
 -- vim.api.nvim_set_keymap('n', '', '<Plug>(coc-fix-current)'           , 'auto fix problem om current line', default_opts)
+
+-- Vimspector
+
+vim.api.nvim_set_keymap('n', '<Leader>v', '<Plug>VimspectorBalloonEval', default_opts)
+

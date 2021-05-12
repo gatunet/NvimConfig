@@ -3,8 +3,20 @@ return require('packer').startup(function()
   -- Packer can manage itself
   use "wbthomason/packer.nvim"
 
-  -- Colors
+  -- Colorschemes
   use { "sainnhe/sonokai" }
+  use { "glepnir/zephyr-nvim" }
+  use { "Th3Whit3Wolf/onebuddy", requires = { "tjdevries/colorbuddy.vim" } }
+  use { "sainnhe/edge" }
+  use { "Th3Whit3Wolf/space-nvim" }
+  use { "npxbr/gruvbox.nvim", requires = { "rktjmp/lush.nvim" }}
+  use { "ray-x/aurora" }
+  use { "novakne/kosmikoa.nvim" }
+  use { "marko-cerovac/material.nvim" }
+  use { "olimorris/onedark.nvim" }
+  use { "RishabhRD/nvim-rdark", requires = { "tjdevries/colorbuddy.vim" } }
+
+  -- Colors
   use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}
   use { "p00f/nvim-ts-rainbow", requires = {"nvim-treesitter/nvim-treesitter"} }
   use { "norcalli/nvim-colorizer.lua" }
@@ -17,6 +29,7 @@ return require('packer').startup(function()
   use { "nvim-telescope/telescope.nvim",
     requires = {{"nvim-lua/popup.nvim"}, {"nvim-lua/plenary.nvim"}}
   }
+  use { "junegunn/gv.vim", requires = { "tpope/vim-fugitive" } }
   -- Better editing
   use { "windwp/nvim-autopairs" }
   use { "terrortylor/nvim-comment" }

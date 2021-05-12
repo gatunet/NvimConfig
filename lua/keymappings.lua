@@ -67,5 +67,6 @@ vim.api.nvim_set_keymap('n', '<Leader>c', '<Plug>(coc-codeaction-selected)<CR>' 
 
 -- Vimspector
 
-vim.api.nvim_set_keymap('n', '<Leader>v', '<Plug>VimspectorBalloonEval', default_opts)
+vim.api.nvim_set_keymap('n', '<Leader>de', '<cmd>VimspectorBalloonEval<CR>', default_opts)
+vim.api.nvim_set_keymap('n', '<Leader>dr', '<cmd>VimspectorReset<CR>', default_opts)
 

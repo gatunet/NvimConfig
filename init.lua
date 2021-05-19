@@ -30,8 +30,6 @@ require('plugins_configs.i3_config')
 require('plugins_configs.lsp_saga')
 require('plugins_configs.compe')
 
--- vim.cmd("source /home/gartunius/.config/nvim/vimscript/settings.vim")
-
 require('lsp_configs.lua_lsp')
 require('lsp_configs.python_lsp')
 

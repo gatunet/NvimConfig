@@ -14,7 +14,8 @@ vim.wo.number = true
 vim.wo.relativenumber = true
 vim.wo.cursorline = true
 vim.wo.list = true
-vim.wo.listchars = "eol:¬,tab:─·,trail:~,extends:·,precedes:·,space:·,"
+-- vim.wo.listchars = "eol:¬,tab:─·,trail:~,extends:·,precedes:·,space:·,"
+vim.cmd([[set listchars=eol:¬,tab:─·,trail:~,extends:·,precedes:·,space:·,]])
 vim.wo.signcolumn = "yes"
 vim.wo.colorcolumn = "90"
 vim.o.cmdheight = 2
@@ -44,6 +45,9 @@ vim.o.undodir = "/home/gartunius/.config/nvim/undodir"
 vim.bo.undofile = true
 
 -- Other settings
-vim.o.updatetime = 300
+vim.o.updatetime = 100
 vim.o.termguicolors = true
 vim.o.clipboard = "unnamedplus"
+vim.o.completeopt = "menuone,noselect"
+-- vim.o.shortmess = vim.o.shortmess + "c"
+vim.cmd([[set shortmess+=c]])

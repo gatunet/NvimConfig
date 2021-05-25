@@ -16,9 +16,9 @@ vim.wo.cursorline = true
 vim.wo.list = true
 -- vim.wo.listchars = "eol:¬,tab:─·,trail:~,extends:·,precedes:·,space:·,"
 vim.cmd([[set listchars=eol:¬,tab:─·,trail:~,extends:·,precedes:·,space:·,]])
-vim.wo.signcolumn = "yes"
+vim.wo.signcolumn = "yes:1"
 vim.wo.colorcolumn = "90"
-vim.o.cmdheight = 2
+vim.o.cmdheight = 1
 vim.o.showmode = false
 
 -- Search
@@ -33,16 +33,23 @@ vim.o.splitbelow = true
 
 -- Indent configs
 vim.bo.smartindent = true
-vim.bo.tabstop = 4 -- number of spaces that a <tab> counts for
-vim.bo.shiftwidth = 4 -- number of spaces for each '>>'
-vim.bo.softtabstop = 4 -- number of spaces that a <tab> counts for when performing editing operations
-vim.bo.expandtab = true -- use the appropriate number of spaces to insert a <tab>
+-- vim.bo.tabstop = 4 -- number of spaces that a <tab> counts for
+vim.cmd([[set tabstop=4]])
+-- vim.bo.shiftwidth = 4 -- number of spaces for each '>>'
+vim.cmd([[set shiftwidth=4]])
+-- vim.bo.softtabstop = 4 -- number of spaces that a <tab> counts for when performing editing operations
+vim.cmd([[set softtabstop=4]])
+-- vim.bo.expandtab = true -- use the appropriate number of spaces to insert a <tab>
+vim.cmd([[set expandtab]])
 
 --Files
-vim.bo.swapfile = false
-vim.o.backup = false
+-- vim.bo.swapfile = false
+vim.cmd([[set noswapfile]])
+-- vim.o.backup = false
+vim.cmd([[set nobackup]])
 vim.o.undodir = "/home/gartunius/.config/nvim/undodir"
-vim.bo.undofile = true
+-- vim.bo.undofile = true
+vim.cmd([[set undofile]])
 
 -- Other settings
 vim.o.updatetime = 100
@@ -51,3 +58,4 @@ vim.o.clipboard = "unnamedplus"
 vim.o.completeopt = "menuone,noselect"
 -- vim.o.shortmess = vim.o.shortmess + "c"
 vim.cmd([[set shortmess+=c]])
+vim.o.timeoutlen = 100

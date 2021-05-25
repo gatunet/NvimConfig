@@ -29,7 +29,9 @@ require('plugins_configs.vimspector')
 require('plugins_configs.i3_config')
 require('plugins_configs.lsp_saga')
 require('plugins_configs.compe')
+require('plugins_configs.which_key')
 
+require('lsp_configs.lsp')
 require('lsp_configs.lua_lsp')
 require('lsp_configs.python_lsp')
 

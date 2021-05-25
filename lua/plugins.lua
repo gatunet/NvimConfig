@@ -28,14 +28,15 @@ return require('packer').startup(function(use)
   use { "lewis6991/gitsigns.nvim", requires = { "nvim-lua/plenary.nvim" } }
 
   -- Better editing
-  use { "windwp/nvim-autopairs" }
+  -- use { "windwp/nvim-autopairs" }
+  use { "jiangmiao/auto-pairs" }
   use { "terrortylor/nvim-comment" }
   use { "szw/vim-maximizer" }
   use { "kevinhwang91/nvim-bqf" }
   use { "yuttie/comfortable-motion.vim" }
 
   -- Others
-  -- use { "liuchengxu/vim-which-key" }
+  use { "folke/which-key.nvim" }
 
   -- Previewing
   use { "iamcco/markdown-preview.nvim" }

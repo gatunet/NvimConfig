@@ -6,7 +6,8 @@ return require('packer').startup(function(use)
   -- LSP
   use { "neovim/nvim-lspconfig" }
   use { "glepnir/lspsaga.nvim" }
-  use { "hrsh7th/nvim-compe" }
+  -- use { "hrsh7th/nvim-compe" }
+  use { "nvim-lua/completion-nvim" }
 
   -- SyntaxHighlight
   use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}
@@ -28,8 +29,7 @@ return require('packer').startup(function(use)
   use { "lewis6991/gitsigns.nvim", requires = { "nvim-lua/plenary.nvim" } }
 
   -- Better editing
-  -- use { "windwp/nvim-autopairs" }
-  use { "jiangmiao/auto-pairs" }
+  use { "windwp/nvim-autopairs" }
   use { "terrortylor/nvim-comment" }
   use { "szw/vim-maximizer" }
   use { "kevinhwang91/nvim-bqf" }

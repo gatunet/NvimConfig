@@ -1,3 +1,2 @@
-vim.g.completion_enable_auto_popup = 1
-vim.g.completion_timer_cycle = 200
-
+vim.cmd([[ autocmd BufEnter * lua require'completion'.on_attach() ]])
+vim.g.completion_timer_cycle = 10

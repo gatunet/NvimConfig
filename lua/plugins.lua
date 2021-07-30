@@ -6,8 +6,8 @@ return require('packer').startup(function(use)
   -- LSP
   use { "neovim/nvim-lspconfig" }
   use { "glepnir/lspsaga.nvim" }
-  -- use { "hrsh7th/nvim-compe" }
-  use { "nvim-lua/completion-nvim" }
+  use { "hrsh7th/nvim-compe" }
+  -- use { "nvim-lua/completion-nvim" }
 
   -- SyntaxHighlight
   use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}

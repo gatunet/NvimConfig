@@ -30,13 +30,13 @@ vim.api.nvim_set_keymap('n', '<A-8>',     '<cmd>BufferGoto 8<CR>',           def
 vim.api.nvim_set_keymap('n', '<A-9>',     '<cmd>BufferLast<CR>',             default_opts)
 vim.api.nvim_set_keymap('n', '<A-c>',     '<cmd>BufferClose<CR>',            default_opts)
 
-vim.cmd([[
-" Use <Tab> and <S-Tab> to navigate through popup menu
-inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
-
-imap <tab> <Plug>(completion_smart_tab)
-imap <s-tab> <Plug>(completion_smart_s_tab)
-
-]])
-
+-- vim.cmd([[
+-- " Use <Tab> and <S-Tab> to navigate through popup menu
+-- inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
+-- inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+-- 
+-- imap <tab> <Plug>(completion_smart_tab)
+-- imap <s-tab> <Plug>(completion_smart_s_tab)
+-- 
+-- ]])
+-- 

@@ -1,41 +1,54 @@
--- Visual artifacts
-vim.opt.number = true
-vim.opt.relativenumber = true
-vim.opt.cursorline = true
-vim.opt.list = true
-vim.opt.listchars = { eol = '¬',tab = '─·', trail = '~', extends = '·', precedes = '·', space = '·' }
-vim.opt.signcolumn = "yes"
-vim.opt.colorcolumn = "90"
-vim.opt.cmdheight = 1
-vim.opt.showmode = false
+local options = {
+    -- Visual artifacts
+    number = true,
+    relativenumber = true,
+    cursorline = true,
+    list = true,
+    listchars = { eol = '¬',tab = '─·', trail = '~', extends = '·', precedes = '·', space = '·' },
+    signcolumn = "yes",
+    colorcolumn = "90",
+    cmdheight = 2,
+    showmode = false,
 
--- Search
-vim.opt.ignorecase = true
-vim.opt.smartcase = true
+    -- Search
+    ignorecase = true,
+    smartcase = true,
 
--- Moving helpers
-vim.opt.scrolloff = 10
-vim.opt.scroll = 20
-vim.opt.splitright = true
-vim.opt.splitbelow = true
+    -- Moving helpers
+    scrolloff = 10,
+    scroll = 20,
+    splitright = true,
+    splitbelow = true,
 
--- Indent configs
-vim.opt.smartindent = true
-vim.opt.tabstop = 4 -- number of spaces that a <tab> counts for
-vim.opt.shiftwidth = 4 -- number of spaces for each '>>'
-vim.opt.softtabstop = 4 -- number of spaces that a <tab> counts for when performing editing operations
-vim.opt.expandtab = true -- use the appropriate number of spaces to insert a <tab>
+    -- Indent configs
+    smartindent = true,
+    tabstop = 4,
+    shiftwidth = 4,
+    softtabstop = 4,
+    expandtab = true,
 
---Files
-vim.opt.swapfile = false
-vim.opt.backup = false
-vim.opt.undodir = "/home/gabriel/.config/nvim/undodir"
-vim.opt.undofile = true
+    --Files
+    swapfile = false,
+    backup = false,
+    undodir = "/home/gabriel/.config/nvim/undodir",
+    undofile = true,
 
--- Other settings
-vim.opt.updatetime = 100
-vim.opt.termguicolors = true
-vim.opt.clipboard = "unnamedplus"
-vim.opt.completeopt = "menuone,noselect,noinsert"
-vim.opt.shortmess = vim.opt.shortmess + "c"
-vim.opt.timeoutlen = 100
+    -- Other settings
+    updatetime = 100,
+    termguicolors = true,
+    clipboard = "unnamedplus",
+    completeopt = "menuone,noselect,noinsert",
+    shortmess = vim.opt.shortmess + "c",
+    timeoutlen = 100,
+}
+
+for option, value in pairs(options) do
+    vim.opt[option] = value
+end
+
+-- Language Specific
+
+-- Typescrip
+vim.cmd([[autocmd FileType typescript set tabstop=2]])
+vim.cmd([[autocmd FileType typescript set shiftwidth=2]])
+vim.cmd([[autocmd FileType typescript set softtabstop=2]])

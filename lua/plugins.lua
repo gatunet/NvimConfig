@@ -7,7 +7,10 @@ return require('packer').startup(function(use)
   use { "neovim/nvim-lspconfig" }
   use { "glepnir/lspsaga.nvim" }
   use { "hrsh7th/nvim-compe" }
-  -- use { "nvim-lua/completion-nvim" }
+  use { "ludovicchabant/vim-gutentags" }
+
+  -- Language Specific
+  use { "mgedmin/python-imports.vim" }
 
   -- SyntaxHighlight
   use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}

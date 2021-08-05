@@ -52,3 +52,5 @@ end
 vim.cmd([[autocmd FileType typescript set tabstop=2]])
 vim.cmd([[autocmd FileType typescript set shiftwidth=2]])
 vim.cmd([[autocmd FileType typescript set softtabstop=2]])
+
+-- Python

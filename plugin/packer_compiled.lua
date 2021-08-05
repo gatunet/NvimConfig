@@ -81,9 +81,9 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/gabriel/.local/share/nvim/site/pack/packer/start/colorbuddy.vim"
   },
-  ["completion-nvim"] = {
+  ["comfortable-motion.vim"] = {
     loaded = true,
-    path = "/home/gabriel/.local/share/nvim/site/pack/packer/start/completion-nvim"
+    path = "/home/gabriel/.local/share/nvim/site/pack/packer/start/comfortable-motion.vim"
   },
   edge = {
     loaded = true,
@@ -145,6 +145,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/gabriel/.local/share/nvim/site/pack/packer/start/nvim-comment"
   },
+  ["nvim-compe"] = {
+    loaded = true,
+    path = "/home/gabriel/.local/share/nvim/site/pack/packer/start/nvim-compe"
+  },
   ["nvim-lspconfig"] = {
     loaded = true,
     path = "/home/gabriel/.local/share/nvim/site/pack/packer/start/nvim-lspconfig"
@@ -189,6 +193,10 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/gabriel/.local/share/nvim/site/pack/packer/start/popup.nvim"
   },
+  ["python-imports.vim"] = {
+    loaded = true,
+    path = "/home/gabriel/.local/share/nvim/site/pack/packer/start/python-imports.vim"
+  },
   sonokai = {
     loaded = true,
     path = "/home/gabriel/.local/share/nvim/site/pack/packer/start/sonokai"
@@ -204,6 +212,10 @@ _G.packer_plugins = {
   ["vim-fugitive"] = {
     loaded = true,
     path = "/home/gabriel/.local/share/nvim/site/pack/packer/start/vim-fugitive"
+  },
+  ["vim-gutentags"] = {
+    loaded = true,
+    path = "/home/gabriel/.local/share/nvim/site/pack/packer/start/vim-gutentags"
   },
   ["vim-maximizer"] = {
     loaded = true,

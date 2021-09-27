@@ -27,11 +27,11 @@ local wk = require('which-key')
 
     f = {
         name = '+find',
-        f = {'<cmd>Telescope find_files<CR>', 'files'},
-        g = {'<cmd>Telescope live_grep<CR>', 'grep'},
-        t = {'<Cmd>Telescope help_tags<CR>', 'help tags'},
-        c = {'<Cmd>Telescope commands<CR>', 'commands'},
-        h = {'<Cmd>Telescope command_history<CR>', 'history'},
+        f = { '<cmd>Telescope find_files<CR>', 'files' },
+        g = { '<cmd>Telescope live_grep<CR>', 'grep' },
+        t = { '<Cmd>Telescope help_tags<CR>', 'help tags' },
+        c = { '<Cmd>Telescope commands<CR>', 'commands' },
+        h = { '<Cmd>Telescope command_history<CR>', 'history' },
     },
 
     b = {
@@ -46,13 +46,25 @@ local wk = require('which-key')
         r = { '<cmd>Lspsaga rename<CR>', 'rename' },
         s = { '<cmd>Telescope lsp_document_symbols<CR>', 'document symbols' },
         S = { '<cmd>Telescope lsp_workspace_symbols<CR>', 'workspace symbols' },
-        p = { '<cmd>Lspsaga preview_definition<CR>', 'preview definition' },
+        P = { '<cmd>Lspsaga preview_definition<CR>', 'preview definition' },
         f = { '<cmd>Lspsaga lsp_finder', 'lsp finder' },
-        l = { '<cmd>Lspsaga show_line_diagnostics<CR>', 'line diagnostics' }
+        l = { '<cmd>Lspsaga show_line_diagnostics<CR>', 'line diagnostics' },
+        d = { '<cmd>lua vim.lsp.buf.declaration()<CR>', 'declaration' },
+        R = { '<cmd>lua vim.lsp.buf.references()<CR>', 'references' },
+        p = { '<cmd>lua vim.lsp.diagnostic.goto_prev()<CR>', 'prev diagnostic' },
+        n = { '<cmd>lua vim.lsp.diagnostic.goto_next()<CR>', 'prev diagnostic' },
     },
     g = {
         name = '+git',
         s = { '<cmd>Telescope git_status<CR>', 'status' }
+    },
+    d = {
+        name = '+debugging',
+        b = { "<cmd>lua require'dap'.toggle_breakpoint()<CR>", 'toggle breakpoint' },
+        c = { "<cmd>lua require'dap'.continue()<CR>", 'continue' },
+        o = { "<cmd>lua require'dap'.step_over()<CR>", 'step over' },
+        i = { "<cmd>lua require'dap'.step_into()<CR>", 'step into' },
+        C = { "<cmd>lua require'dap'.close()<CR>", 'close' },
     }
 }, {
   mode = "n",

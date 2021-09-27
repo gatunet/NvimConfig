@@ -53,4 +53,10 @@ vim.cmd([[autocmd FileType typescript set tabstop=2]])
 vim.cmd([[autocmd FileType typescript set shiftwidth=2]])
 vim.cmd([[autocmd FileType typescript set softtabstop=2]])
 
+-- JSON
+vim.cmd([[autocmd FileType json set tabstop=2]])
+vim.cmd([[autocmd FileType json set shiftwidth=2]])
+vim.cmd([[autocmd FileType json set softtabstop=2]])
+
 -- Python
+vim.g.python3_host_prog = '/home/gabriel/.pyenv/versions/py3nvim/bin/python'

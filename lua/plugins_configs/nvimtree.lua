@@ -1,5 +1,5 @@
 vim.g.nvim_tree_side = "right"
-vim.g.nvim_tree_width = 35
+vim.g.nvim_tree_width = 55
 vim.g.nvim_tree_auto_close = 1
 vim.g.nvim_tree_hide_dotfiles = 0
 vim.g.nvim_tree_indent_markers = 1

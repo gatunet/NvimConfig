@@ -65,6 +65,8 @@ local wk = require('which-key')
         o = { "<cmd>lua require'dap'.step_over()<CR>", 'step over' },
         i = { "<cmd>lua require'dap'.step_into()<CR>", 'step into' },
         C = { "<cmd>lua require'dap'.close()<CR>", 'close' },
+        e = { '<cmd>lua require("dapui").eval()<CR>', 'evaluate' },
+        l = { "<cmd>lua require'dap'.run_last()<CR>", 'run last' },
     }
 }, {
   mode = "n",

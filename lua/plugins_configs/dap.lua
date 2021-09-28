@@ -2,7 +2,7 @@ local dap = require('dap')
 
 require('dap.ext.vscode').load_launchjs()
 
-vim.fn.sign_define('DapBreakpoint', {text='', texthl='', linehl='', numhl=''})
+vim.fn.sign_define('DapBreakpoint', {text='', texthl='', linehl='', numhl=''})
 vim.fn.sign_define('DapLogPoint', {text='', texthl='', linehl='', numhl=''})
 vim.fn.sign_define('DapBreakpointRejected', {text='', texthl='', linehl='', numhl=''})
 
@@ -31,12 +31,12 @@ require("dapui").setup({
       { id = "stacks", size = 0.25 },
       { id = "watches", size = 00.25 },
     },
-    size = 50,
+    size = 70,
     position = "left",
   },
   tray = {
     elements = { "repl" },
-    size = 15,
+    size = 20,
     position = "bottom",
   },
   floating = {

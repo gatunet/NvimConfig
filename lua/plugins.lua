@@ -36,7 +36,7 @@ return require('packer').startup(function(use)
     use { "szw/vim-maximizer" }
     use { "kevinhwang91/nvim-bqf" }
 
-    -- Others
+    -- Mappings
     use { "folke/which-key.nvim" }
 
     -- Previewing
@@ -49,8 +49,8 @@ return require('packer').startup(function(use)
     use { "glepnir/galaxyline.nvim" }
 
     -- Debugging
-    use { "puremourning/vimspector" }
     use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
+    use { "rcarriga/vim-ultest", requires = {"vim-test/vim-test"}, run = ":UpdateRemotePlugins" }
 
     -- Colorschemes
     use { "sainnhe/sonokai" }

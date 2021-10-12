@@ -59,5 +59,15 @@ vim.cmd([[autocmd FileType json set tabstop=2]])
 vim.cmd([[autocmd FileType json set shiftwidth=2]])
 vim.cmd([[autocmd FileType json set softtabstop=2]])
 
+-- HTML
+vim.cmd([[autocmd FileType html set tabstop=2]])
+vim.cmd([[autocmd FileType html set shiftwidth=2]])
+vim.cmd([[autocmd FileType html set softtabstop=2]])
+
+-- CSS
+vim.cmd([[autocmd FileType css set tabstop=2]])
+vim.cmd([[autocmd FileType css set shiftwidth=2]])
+vim.cmd([[autocmd FileType css set softtabstop=2]])
+
 -- Python
 vim.g.python3_host_prog = '/home/gabriel/.pyenv/versions/py3nvim/bin/python'

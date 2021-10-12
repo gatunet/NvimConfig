@@ -24,3 +24,7 @@ for _, lsp in ipairs(servers) do
     on_attach = on_attach
   }
 end
+
+-- require'lspconfig'.html.setup{}
+
+-- require'lspconfig'.angularls.setup{}

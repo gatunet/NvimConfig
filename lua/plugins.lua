@@ -29,12 +29,14 @@ return require('packer').startup(function(use)
     -- Git
     use { "lewis6991/gitsigns.nvim", requires = { "nvim-lua/plenary.nvim" } }
     use { "kdheepak/lazygit.nvim" }
+    use { "APZelos/blamer.nvim" }
 
     -- Better editing
     use { "windwp/nvim-autopairs" }
     use { "terrortylor/nvim-comment" }
     use { "szw/vim-maximizer" }
     use { "kevinhwang91/nvim-bqf" }
+    use { "windwp/nvim-ts-autotag" }
 
     -- Mappings
     use { "folke/which-key.nvim" }
@@ -55,5 +57,6 @@ return require('packer').startup(function(use)
     -- Colorschemes
     use { "sainnhe/sonokai" }
     use { "sainnhe/edge" }
+    use { "sainnhe/gruvbox-material" }
 
 end)

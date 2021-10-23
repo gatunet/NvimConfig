@@ -1,15 +1,16 @@
-vim.g.nvim_tree_side = "right"
-vim.g.nvim_tree_width = 55
-vim.g.nvim_tree_auto_close = 1
-vim.g.nvim_tree_hide_dotfiles = 0
-vim.g.nvim_tree_indent_markers = 1
-vim.g.nvim_tree_quit_on_open = 1
--- vim.g.nvim_tree_tab_open = 1
-vim.g.nvim_tree_add_trailing = 1
+-- vim.g.nvim_tree_icons = {
+--     default = ' ',
+--     symlink = ' ',
+--     git = {unstaged = "", staged = "✓", unmerged = "", renamed = "➜", untracked = ""},
+--     folder = {default = "", open = "", empty = "", empty_open = "", symlink = ""}
+-- }
 
-  vim.g.nvim_tree_icons = {
-      default = ' ',
-      symlink = ' ',
-      git = {unstaged = "", staged = "✓", unmerged = "", renamed = "➜", untracked = ""},
-      folder = {default = "", open = "", empty = "", empty_open = "", symlink = ""}
-  }
+require'nvim-tree'.setup {
+    auto_close = true,
+    hijack_cursor = true,
+    view = {
+        -- width = 55,
+        -- side = "rigth",
+        -- auto_resize = true
+    }
+}

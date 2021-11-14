@@ -30,6 +30,13 @@ vim.api.nvim_set_keymap('n', '<A-8>',     '<cmd>BufferGoto 8<CR>',           def
 vim.api.nvim_set_keymap('n', '<A-9>',     '<cmd>BufferLast<CR>',             default_opts)
 vim.api.nvim_set_keymap('n', '<A-c>',     '<cmd>BufferClose<CR>',            default_opts)
 
+-- Harpoon
+vim.api.nvim_set_keymap('n', 'm-1', '<cmd>lua require("harpoon.ui").nav_file(1)<CR>', default_opts)
+vim.api.nvim_set_keymap('n', 'm-2', '<cmd>lua require("harpoon.ui").nav_file(2)<CR>', default_opts)
+vim.api.nvim_set_keymap('n', 'm-3', '<cmd>lua require("harpoon.ui").nav_file(3)<CR>', default_opts)
+vim.api.nvim_set_keymap('n', 'm-4', '<cmd>lua require("harpoon.ui").nav_file(4)<CR>', default_opts)
+vim.api.nvim_set_keymap('n', 'm-5', '<cmd>lua require("harpoon.ui").nav_file(5)<CR>', default_opts)
+
 vim.api.nvim_set_keymap('n', '<A-o>',     '<cmd>termopen()<CR>',            default_opts)
 
 local t = function(str)

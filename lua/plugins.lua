@@ -19,6 +19,9 @@ return require('packer').startup(function(use)
 
     -- Language Specific
 
+    -- HTML
+    use { "mattn/emmet-vim" }
+
     -- SyntaxHighlight
     use { "nvim-treesitter/nvim-treesitter", run = ":TSUpdate"}
     use { "p00f/nvim-ts-rainbow", requires = {"nvim-treesitter/nvim-treesitter"} }

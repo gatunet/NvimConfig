@@ -29,9 +29,11 @@ local wk = require('which-key')
         name = '+find',
         f = { '<cmd>Telescope find_files<CR>', 'files' },
         g = { '<cmd>Telescope live_grep<CR>', 'grep' },
-        t = { '<Cmd>Telescope help_tags<CR>', 'help tags' },
-        c = { '<Cmd>Telescope commands<CR>', 'commands' },
-        h = { '<Cmd>Telescope command_history<CR>', 'history' },
+        t = { '<cmd>Telescope help_tags<CR>', 'help tags' },
+        c = { '<cmd>Telescope commands<CR>', 'commands' },
+        h = { '<cmd>Telescope command_history<CR>', 'history' },
+        a = { '<cmd>lua require("harpoon.mark").add_file()<CR>', 'add file to harpoon' },
+        e = { '<cmd>lua require("harpoon.ui").toggle_quick_menu()<CR>', 'edit menu' },
     },
 
     b = {

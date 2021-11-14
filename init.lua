@@ -33,6 +33,7 @@ require('plugins_configs.indent_blank_line')
 require('plugins_configs.dap')
 require('plugins_configs.vim_ultest')
 require('plugins_configs.neoscroll')
+require('plugins_configs.smart_term_esc')
 
 require('lsps_configs.lua')
 require('lsps_configs.python')

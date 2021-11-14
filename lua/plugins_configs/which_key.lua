@@ -20,7 +20,7 @@ local wk = require('which-key')
     s = {'<cmd>split<CR>', 'split window'},
     h = {'<cmd>noh<CR>', 'clear highlights'},
     m = {'<cmd>MaximizerToggle<CR>', 'maximaze screen'},
-    T = {"<cmd>lua require('FTerm').toggle()<CR>", 'open neovim terminal'},
+    t = {"<cmd>lua require('FTerm').toggle()<CR>", 'open neovim terminal'},
     e = {'<cmd>NvimTreeToggle<CR>', 'open nvimtree'},
     r = {'<cmd>NvimTreeRefresh<CR>', 'refresh nvimtree'},
     ["/"] = "Comment",
@@ -71,15 +71,13 @@ local wk = require('which-key')
         C = { "<cmd>lua require'dap'.close()<CR>", 'close' },
         e = { '<cmd>lua require("dapui").eval()<CR>', 'evaluate' },
         l = { "<cmd>lua require'dap'.run_last()<CR>", 'run last' },
-    },
-    t = {
-        name = '+testing',
         n = { "<cmd>UltestNearest<CR>", 'test nearest' },
         f = { "<cmd>Ultest<CR>", 'test file' },
         s = { "<cmd>TestSuite<CR>", 'test suite' },
-        l = { "<cmd>TestLast<CR>", 'test last' },
+        t = { "<cmd>TestLast<CR>", 'test last' },
         v = { "<cmd>TestVisit<CR>", 'test visit' },
-    }
+
+    },
 }, {
   mode = "n",
   prefix = "<leader>",

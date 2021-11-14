@@ -51,6 +51,7 @@ return require('packer').startup(function(use)
     use { "kevinhwang91/nvim-bqf" }
     use { "windwp/nvim-ts-autotag" }
     use { "karb94/neoscroll.nvim" }
+    use { "ggandor/lightspeed.nvim" }
 
     -- Mappings
     use { "folke/which-key.nvim" }
@@ -61,6 +62,7 @@ return require('packer').startup(function(use)
     -- Terminal
     use { "christoomey/vim-tmux-navigator" }
     use { "numtostr/FTerm.nvim" }
+    use { "sychen52/smart-term-esc.nvim" }
 
     -- Statusline
     use { "glepnir/galaxyline.nvim" }

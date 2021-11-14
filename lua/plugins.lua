@@ -37,6 +37,7 @@ return require('packer').startup(function(use)
     use { "nvim-telescope/telescope.nvim",
         requires = {{"nvim-lua/popup.nvim"}, {"nvim-lua/plenary.nvim"}}
     }
+    use { "ThePrimeagen/harpoon", requires = { "nvim-lua/plenary.nvim" } }
 
     -- Git
     use { "lewis6991/gitsigns.nvim", requires = { "nvim-lua/plenary.nvim" } }
@@ -49,6 +50,7 @@ return require('packer').startup(function(use)
     use { "szw/vim-maximizer" }
     use { "kevinhwang91/nvim-bqf" }
     use { "windwp/nvim-ts-autotag" }
+    use { "karb94/neoscroll.nvim" }
 
     -- Mappings
     use { "folke/which-key.nvim" }
@@ -56,8 +58,9 @@ return require('packer').startup(function(use)
     -- Previewing
     use { "iamcco/markdown-preview.nvim" }
 
-    -- Tmux
+    -- Terminal
     use { "christoomey/vim-tmux-navigator" }
+    use { "numtostr/FTerm.nvim" }
 
     -- Statusline
     use { "glepnir/galaxyline.nvim" }

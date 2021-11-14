@@ -32,6 +32,7 @@ require('plugins_configs.which_key')
 require('plugins_configs.indent_blank_line')
 require('plugins_configs.dap')
 require('plugins_configs.vim_ultest')
+require('plugins_configs.neoscroll')
 
 require('lsps_configs.lua')
 require('lsps_configs.python')

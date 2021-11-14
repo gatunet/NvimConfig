@@ -9,8 +9,8 @@ require'nvim-tree'.setup {
     auto_close = true,
     hijack_cursor = true,
     view = {
-        -- width = 55,
-        -- side = "rigth",
-        -- auto_resize = true
+        width = 55,
+        side = "right",
+        auto_resize = true
     }
 }

@@ -5,7 +5,8 @@ return require('packer').startup(function(use)
 
     -- LSP
     use { "neovim/nvim-lspconfig" }
-    use { "glepnir/lspsaga.nvim" }
+    -- use { "glepnir/lspsaga.nvim" }
+    use { "rinx/lspsaga.nvim" }
 
     -- Completion
     use { "hrsh7th/nvim-cmp" }
@@ -61,6 +62,7 @@ return require('packer').startup(function(use)
     -- Debugging
     use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
     use { "rcarriga/vim-ultest", requires = {"vim-test/vim-test"}, run = ":UpdateRemotePlugins" }
+    use { "NTBBloodbath/rest.nvim" }
 
     -- Colorschemes
     use { "sainnhe/sonokai" }

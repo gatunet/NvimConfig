@@ -36,8 +36,8 @@ local wk = require('which-key')
 
     b = {
         name = '+buffer',
-        d = { '<Space>bd', 'order by dir' },
-        l = { '<Space>bl', 'order by language' },
+        d = { '<cmd>BufferOrderByDirectory<CR>', 'order by dir' },
+        l = { '<cmd>BufferOrderByLanguage<CR>', 'order by language' },
     },
     l = {
         name = '+lsp',
@@ -47,7 +47,7 @@ local wk = require('which-key')
         s = { '<cmd>Telescope lsp_document_symbols<CR>', 'document symbols' },
         S = { '<cmd>Telescope lsp_workspace_symbols<CR>', 'workspace symbols' },
         P = { '<cmd>Lspsaga preview_definition<CR>', 'preview definition' },
-        f = { '<cmd>Lspsaga lsp_finder', 'lsp finder' },
+        f = { '<cmd>Lspsaga lsp_finder<CR>', 'lsp finder' },
         l = { '<cmd>Lspsaga show_line_diagnostics<CR>', 'line diagnostics' },
         d = { '<cmd>lua vim.lsp.buf.declaration()<CR>', 'declaration' },
         R = { '<cmd>lua vim.lsp.buf.references()<CR>', 'references' },
@@ -56,7 +56,9 @@ local wk = require('which-key')
     },
     g = {
         name = '+git',
-        s = { '<cmd>Telescope git_status<CR>', 'status' }
+        s = { '<cmd>Telescope git_status<CR>', 'status' },
+        l = { '<cmd>LazyGit<CR>', 'lazy git' },
+        c = { '<cmd>LazyGitConfig<CR>', 'lazy git' },
     },
     d = {
         name = '+debugging',

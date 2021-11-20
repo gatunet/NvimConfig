@@ -32,6 +32,7 @@ local wk = require('which-key')
         t = { '<cmd>Telescope help_tags<CR>', 'help tags' },
         c = { '<cmd>Telescope commands<CR>', 'commands' },
         h = { '<cmd>Telescope command_history<CR>', 'history' },
+        b = { '<cmd>Telescope buffers<CR>', 'buffers' },
         a = { '<cmd>lua require("harpoon.mark").add_file()<CR>', 'add file to harpoon' },
         e = { '<cmd>lua require("harpoon.ui").toggle_quick_menu()<CR>', 'edit menu' },
     },

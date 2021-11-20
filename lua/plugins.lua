@@ -17,6 +17,8 @@ return require('packer').startup(function(use)
     use { "hrsh7th/cmp-calc" }
     use { "ray-x/cmp-treesitter" }
 
+    use { "L3MON4D3/LuaSnip" }
+
     -- Language Specific
 
     -- HTML
@@ -29,7 +31,6 @@ return require('packer').startup(function(use)
     use { "mboughaba/i3config.vim" }
 
     -- Buffers
-    use { "romgrk/barbar.nvim", requires = { "kyazdani42/nvim-web-devicons" } }
     use { "lukas-reineke/indent-blankline.nvim" }
 
     -- Files

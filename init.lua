@@ -34,6 +34,7 @@ require('plugins_configs.dap')
 require('plugins_configs.vim_ultest')
 require('plugins_configs.neoscroll')
 require('plugins_configs.smart_term_esc')
+-- require('plugins_configs.lualine')
 
 require('lsps_configs.lua')
 require('lsps_configs.python')

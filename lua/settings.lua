@@ -32,6 +32,7 @@ local options = {
     backup = false,
     undodir = "/home/gabriel/.config/nvim/undodir",
     undofile = true,
+    autoread = true,
 
     -- Other settings
     updatetime = 100,
@@ -40,6 +41,7 @@ local options = {
     completeopt = "menuone,noselect,noinsert",
     shortmess = vim.opt.shortmess + "c",
     timeoutlen = 100,
+    mouse = 'n'
 }
 
 for option, value in pairs(options) do
@@ -49,7 +51,7 @@ end
 -- ColorScheme
 
 -- Sonokai
-vim.g.sonokai_style = "espresso"
+vim.g.sonokai_style = "shusia"
 vim.g.sonokai_enable_italic = 1
 vim.g.sonokai_transparent_background = 0
 
@@ -59,7 +61,7 @@ vim.g.gruvbox_material_palette = "mix"
 vim.g.gruvbox_material_enable_italic = 1
 vim.g.gruvbox_material_transparent_background = 1
 
-vim.cmd([[colorscheme gruvbox-material]])
+vim.cmd([[colorscheme sonokai]])
 
 
 -- Language Specific
@@ -86,4 +88,4 @@ vim.cmd([[autocmd FileType css set shiftwidth=2]])
 vim.cmd([[autocmd FileType css set softtabstop=2]])
 
 -- Python
-vim.g.python3_host_prog = '/home/gabriel/.pyenv/versions/py3nvim/bin/python'
+-- vim.g.python3_host_prog = '/home/gabriel/.pyenv/versions/py3nvim/bin/python'

@@ -52,7 +52,7 @@ return require('packer').startup(function(use)
     use { "kevinhwang91/nvim-bqf" }
     use { "windwp/nvim-ts-autotag" }
     use { "karb94/neoscroll.nvim" }
-    use { "ggandor/lightspeed.nvim" }
+    -- use { "ggandor/lightspeed.nvim" }
 
     -- Mappings
     use { "folke/which-key.nvim" }
@@ -63,10 +63,11 @@ return require('packer').startup(function(use)
     -- Terminal
     use { "christoomey/vim-tmux-navigator" }
     use { "numtostr/FTerm.nvim" }
-    use { "sychen52/smart-term-esc.nvim" }
+    -- use { "sychen52/smart-term-esc.nvim" }
 
     -- Statusline
-    use { "glepnir/galaxyline.nvim" }
+    -- use { "glepnir/galaxyline.nvim" }
+    use {"nvim-lualine/lualine.nvim"}
 
     -- Debugging
     use { "rcarriga/nvim-dap-ui", requires = {"mfussenegger/nvim-dap"} }
@@ -77,5 +78,8 @@ return require('packer').startup(function(use)
     use { "sainnhe/sonokai" }
     use { "sainnhe/edge" }
     use { "sainnhe/gruvbox-material" }
+
+    -- Integrations
+    -- use { "RishabhRD/nvim-cheat.sh", requires = { "RishabhRD/popfir" } }
 
 end)

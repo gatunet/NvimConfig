@@ -22,7 +22,7 @@ local wk = require('which-key')
     m = {'<cmd>MaximizerToggle<CR>', 'maximaze screen'},
     t = {"<cmd>lua require('FTerm').toggle()<CR>", 'open neovim terminal'},
     e = {'<cmd>NvimTreeToggle<CR>', 'open nvimtree'},
-    r = {'<cmd>NvimTreeRefresh<CR>', 'refresh nvimtree'},
+    r = {'<cmd>checktime<CR>', 'refresh open file'},
     ["/"] = "Comment",
 
     f = {

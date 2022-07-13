@@ -1,5 +1,0 @@
-require'nvim-treesitter.configs'.setup {
-    highlight = { enable = true },
-    rainbow = { enable = true },
-    autotag = { enable = true },
-}

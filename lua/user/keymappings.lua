@@ -17,8 +17,8 @@ keymap('n', '<S-p>', '<cmd>bprevious<CR>')
 
 -- Resize windows
 keymap('n', '<S-h>', '<cmd>vertical resize +2<CR>')
-keymap('n', '<S-j>', '<cmd>resize +2<CR>')
-keymap('n', '<S-k>', '<cmd>resize -2<CR>')
+keymap('n', '<S-j>', '<cmd>resize -2<CR>')
+keymap('n', '<S-k>', '<cmd>resize +2<CR>')
 keymap('n', '<S-l>', '<cmd>vertical resize -2<CR>')
 
 -- Quick ops
@@ -30,9 +30,3 @@ keymap('n', '<leader>s', '<cmd>split<CR>')
 keymap("n", "<leader>/", "<Plug>(comment_toggle_current_linewise)")
 keymap("x", "<leader>/", "<Plug>(comment_toggle_linewise_visual)")
 
--- LSP
--- keymap("n", )
-
--- DAP
--- keymap("n", "<leader>;", "<cmd>lua require'dap'.toggle_breakpoint()<CR>")
--- keymap("n", "<leader>i", "<cmd>lua require'dap'.continue()<CR>")

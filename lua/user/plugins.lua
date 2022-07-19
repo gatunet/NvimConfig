@@ -39,7 +39,6 @@ packer.init {
 
 return packer.startup(function(use)
     use { "wbthomason/packer.nvim", commit = "00ec5adef58c5ff9a07f11f45903b9dbbaa1b422" }
-    use { "sainnhe/sonokai", commit = "e72e59d3e2cad8af17a1e2a0f6772ea56af32e2c" }
     use { "windwp/nvim-autopairs", commit = "fa6876f832ea1b71801c4e481d8feca9a36215ec" }
     use { "folke/which-key.nvim", commit = "bd4411a2ed4dd8bb69c125e339d837028a6eea71" }
     use { "kyazdani42/nvim-web-devicons", commit="8d2c5337f0a2d0a17de8e751876eeb192b32310e" }
@@ -51,8 +50,15 @@ return packer.startup(function(use)
     use { "lewis6991/impatient.nvim", commit="969f2c5c90457612c09cf2a13fee1adaa986d350" }
     use { "antoinemadec/FixCursorHold.nvim", commit="1bfb32e7ba1344925ad815cb0d7f901dbc0ff7c1" }
     use { "ahmedkhalf/project.nvim", commit="541115e762764bc44d7d3bf501b6e367842d3d4f" }
-    use { "lukas-reineke/indent-blankline.nvim", commit="42fe62eb8792e427b2c7b0e1fa1b0d9597baac89" }
+    use { "lukas-reineke/indent-blankline.nvim", commit="4a58fe6e9854ccfe6c6b0f59abb7cb8301e23025" }
     use { "kdheepak/lazygit.nvim", commit="9c73fd69a4c1cb3b3fc35b741ac968e331642600" }
+    -- use { "numirias/semshi", commit="252f07fd5f0ae9eb19d02bae979fd7c9152c1ccf" }
+    -- use { "Vimjas/vim-python-pep8-indent", commit="60ba5e11a61618c0344e2db190210145083c91f8" }
+
+    -- Coloscheme
+    use { "sainnhe/sonokai" }
+    use { "ellisonleao/gruvbox.nvim" }
+    use { "marko-cerovac/material.nvim" }
 
     -- Treesitter
     use {
@@ -83,7 +89,7 @@ return packer.startup(function(use)
     use { "williamboman/nvim-lsp-installer", commit = "e9f13d7acaa60aff91c58b923002228668c8c9e6" }
     use { "jose-elias-alvarez/null-ls.nvim", commit = "ff40739e5be6581899b43385997e39eecdbf9465" }
     use { "RRethy/vim-illuminate", commit = "c82e6d04f27a41d7fdcad9be0bce5bb59fcb78e5" }
-    use { "glepnir/lspsaga.nvim", commit="51a96f2d42169477f0c7e6ebd3239a97c5e7a31c" }
+    use { "glepnir/lspsaga.nvim", commit="fd07a4e583571119b33826041c47af950341325f" }
 
     -- DAP
     use { "mfussenegger/nvim-dap", commit="f4a3be57f61893cffa1e22aa5e1e7bded495fcf2" }

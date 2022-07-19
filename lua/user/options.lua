@@ -4,7 +4,7 @@ local options = {
     relativenumber = true,
     cursorline = true,
     list = true,
-    listchars = { eol = '¬',tab = '─·', trail = '~', extends = '·', precedes = '·', space = '·' },
+    listchars = { eol = '¬',tab = '─·', trail = '~', extends = '·', precedes = '·' },
     signcolumn = "yes",
     colorcolumn = "90",
     cmdheight = 1,
@@ -56,7 +56,7 @@ vim.g.sonokai_style = "shusia"
 vim.g.sonokai_enable_italic = 1
 vim.g.sonokai_transparent_background = 0
 
-vim.cmd([[colorscheme sonokai]])
+vim.cmd([[colorscheme gruvbox]])
 
 -- Language Specific
 

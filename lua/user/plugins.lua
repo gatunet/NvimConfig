@@ -52,13 +52,13 @@ return packer.startup(function(use)
     use { "ahmedkhalf/project.nvim", commit="541115e762764bc44d7d3bf501b6e367842d3d4f" }
     use { "lukas-reineke/indent-blankline.nvim", commit="4a58fe6e9854ccfe6c6b0f59abb7cb8301e23025" }
     use { "kdheepak/lazygit.nvim", commit="9c73fd69a4c1cb3b3fc35b741ac968e331642600" }
-    -- use { "numirias/semshi", commit="252f07fd5f0ae9eb19d02bae979fd7c9152c1ccf" }
-    -- use { "Vimjas/vim-python-pep8-indent", commit="60ba5e11a61618c0344e2db190210145083c91f8" }
+    use { "mrjones2014/smart-splits.nvim", commit="2af8bc37db4d94027a52f0fdd5674e45e0878df9" }
+    use { "eduardomillans/maximizer.nvim", commit="489172b333e91ae47fb2af6b267f25ce401ebc81" }
 
     -- Coloscheme
-    use { "sainnhe/sonokai" }
-    use { "ellisonleao/gruvbox.nvim" }
-    use { "marko-cerovac/material.nvim" }
+    use { "sainnhe/sonokai", commit="888b68bed34a18be8f3341713ccd69b549951d95" }
+    use { "ellisonleao/gruvbox.nvim", commit="29c50f1327d9d84436e484aac362d2fa6bca590b" }
+    use { "kaiuri/nvim-juliana", commit="95fc05d53c7c304290f81638de19a73650e0fdaa" }
 
     -- Treesitter
     use {
@@ -71,8 +71,8 @@ return packer.startup(function(use)
     use {
         "nvim-telescope/telescope.nvim",
         commit = "d96eaa914aab6cfc4adccb34af421bdd496468b0",
-        requires = { 
-            {'nvim-lua/plenary.nvim', commit="968a4b9afec0c633bc369662e78f8c5db0eba249"} 
+        requires = {
+            {'nvim-lua/plenary.nvim', commit="968a4b9afec0c633bc369662e78f8c5db0eba249"}
         }
     }
 
@@ -97,6 +97,10 @@ return packer.startup(function(use)
     use { "nvim-telescope/telescope-dap.nvim", commit="b4134fff5cbaf3b876e6011212ed60646e56f060" }
     use { "theHamsta/nvim-dap-virtual-text", commit="a36982259216afd710f55bcdc220477c74b5bc35" }
     use { "rcarriga/cmp-dap", commit="2c4cecbb9c4d255acc87ccaca727d1ad2f2b8c90" }
+
+    -- Tests
+    use { "vim-test/vim-test", commit="a5b122e8c5eb47db5a034908172ccbee44f4e520" }
+    use { "rcarriga/vim-ultest", commit="c93eb128332f8245776b753407ab6c4432c4c556" }
 
     -- Snippets
     use { "L3MON4D3/LuaSnip", commit="a12441e0598e93e67235eba67c8e6fbffc896f06" }

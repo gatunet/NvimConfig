@@ -23,10 +23,14 @@ keymap('n', '<S-l>', '<cmd>vertical resize -2<CR>')
 
 -- Quick ops
 keymap('n', '<leader>w', '<cmd>w<CR>')
+keymap('n', '<leader>q', '<cmd>q!<CR>')
 keymap('n', '<leader>v', '<cmd>vsplit<CR>')
 keymap('n', '<leader>s', '<cmd>split<CR>')
+keymap('n', '<leader>h', '<cmd>noh<CR>')
 
 -- Comment
 keymap("n", "<leader>/", "<Plug>(comment_toggle_current_linewise)")
 keymap("x", "<leader>/", "<Plug>(comment_toggle_linewise_visual)")
 
+-- Debugging
+keymap("v", "<leader>i", "<cmd>lua require('dapui').eval()<CR>")

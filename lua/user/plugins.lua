@@ -42,7 +42,7 @@ return packer.startup(function(use)
     use { "windwp/nvim-autopairs", commit = "fa6876f832ea1b71801c4e481d8feca9a36215ec" }
     use { "folke/which-key.nvim", commit = "bd4411a2ed4dd8bb69c125e339d837028a6eea71" }
     use { "kyazdani42/nvim-web-devicons", commit="8d2c5337f0a2d0a17de8e751876eeb192b32310e" }
-    use { "kyazdani42/nvim-tree.lua", commit="e6c1b4cd5be9f14c169b5dbe0665a148f8af498c" }
+    use { "kyazdani42/nvim-tree.lua", commit="e8bf3d778a74882d748f55d67af206fa8b321d99" }
     use { "numToStr/Comment.nvim", commit="2c26a00f32b190390b664e56e32fd5347613b9e2" }
     use { "JoosepAlviste/nvim-ts-context-commentstring", commit="88343753dbe81c227a1c1fd2c8d764afb8d36269" }
     use { "nvim-lualine/lualine.nvim", commit="5113cdb32f9d9588a2b56de6d1df6e33b06a554a" }

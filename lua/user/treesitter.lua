@@ -1,9 +1,14 @@
-local status_ok, configs = pcall(require, "nvim-treesitter.configs")
-if not status_ok then
+local trstr_status_ok, trstr = pcall(require, "nvim-treesitter.configs")
+if not trstr_status_ok then
     return
 end
 
-configs.setup({
+local trstr_ctx_status_ok, trstr_ctx = pcall(require, "treesitter-context")
+if not trstr_ctx_status_ok then
+    return
+end
+
+trstr.setup({
     highlight = {
         enable = true, -- false will disable the whole extension
         disable = { "css" }, -- list of language that will be disabled
@@ -17,3 +22,5 @@ configs.setup({
     },
     rainbow = { enable = true }
 })
+
+trstr_ctx.setup{}

@@ -83,7 +83,6 @@ local mappings = {
     v = {'<cmd>vertical split<CR>', 'split window vertically'},
     s = {'<cmd>split<CR>', 'split window'},
     h = {'<cmd>noh<CR>', 'clear highlights'},
-    t = {"<cmd>lua require('FTerm').toggle()<CR>", 'open neovim terminal'},
     e = {'<cmd>NvimTreeToggle<CR>', 'open nvimtree'},
     r = {'<cmd>checktime<CR>', 'refresh open file'},
     f = {
@@ -132,12 +131,13 @@ local mappings = {
         -- e = { '<cmd>lua require("dapui").eval()<CR>', 'evaluate' },
         l = { "<cmd>lua require'dap'.run_last()<CR>", 'run last' },
         t = { "<cmd>lua require('dapui').toggle()<CR>", 'toggle UI'},
-        -- n = { "<cmd>UltestNearest<CR>", 'test nearest' },
-        -- f = { "<cmd>Ultest<CR>", 'test file' },
-        -- s = { "<cmd>TestSuite<CR>", 'test suite' },
-        -- t = { "<cmd>TestLast<CR>", 'test last' },
-        -- v = { "<cmd>TestVisit<CR>", 'test visit' },
-
+        T = { "<cmd>lua require('neotest').run.run({strategy = 'dap'})<CR>", 'nearest test' },
+    },
+     t = {
+        name = '+testing',
+        n = { "<cmd>lua require('neotest').run.run()<CR>", 'test nearest' },
+        f = { "<cmd>lua require('neotest').run.run(vim.fn.expand('%'))<CR>", 'test file' },
+        s = { "<cmd>lua require('neotest').run.stop()<CR>", 'stop test' },
     }
 }
 

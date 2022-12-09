@@ -46,7 +46,7 @@ return packer.startup(function(use)
     use { "numToStr/Comment.nvim", commit="2c26a00f32b190390b664e56e32fd5347613b9e2" }
     use { "JoosepAlviste/nvim-ts-context-commentstring", commit="88343753dbe81c227a1c1fd2c8d764afb8d36269" }
     use { "nvim-lualine/lualine.nvim", commit="5113cdb32f9d9588a2b56de6d1df6e33b06a554a" }
-    use { "lewis6991/gitsigns.nvim", commit="4883988cf8b623f63cc8c7d3f11b18b7e81f06ff" }
+    use { "lewis6991/gitsigns.nvim", commit="facca89a95aa5e492505270a60a30825be576d14"}
     use { "lewis6991/impatient.nvim", commit="969f2c5c90457612c09cf2a13fee1adaa986d350" }
     use { "antoinemadec/FixCursorHold.nvim", commit="1bfb32e7ba1344925ad815cb0d7f901dbc0ff7c1" }
     use { "ahmedkhalf/project.nvim", commit="541115e762764bc44d7d3bf501b6e367842d3d4f" }
@@ -63,9 +63,10 @@ return packer.startup(function(use)
     -- Treesitter
     use {
         "nvim-treesitter/nvim-treesitter",
-        commit = "518e27589c0463af15463c9d675c65e464efc2fe",
+        commit = "26105050aae3a15dd85feaeb0439e253e31d5ceb",
     }
     use { "p00f/nvim-ts-rainbow", commit = "837167f63445821c55e6eed9dbdac1b0b29afa92" }
+    use { "nvim-treesitter/nvim-treesitter-context", commit = "8bef4409a83219e800852f18c2894a60b64071b8" }
 
     -- Telescope
     use {
@@ -77,7 +78,7 @@ return packer.startup(function(use)
     }
 
     -- Cmp plugins
-    use { "hrsh7th/nvim-cmp", commit = "df6734aa018d6feb4d76ba6bda94b1aeac2b378a" }
+    use { "hrsh7th/nvim-cmp", commit = "b0dff0ec4f2748626aae13f011d1a47071fe9abc" }
     use { "hrsh7th/cmp-buffer", commit = "62fc67a2b0205136bc3e312664624ba2ab4a9323" }
     use { "hrsh7th/cmp-path", commit = "466b6b8270f7ba89abd59f402c73f63c7331ff6e" }
     use { "saadparwaiz1/cmp_luasnip", commit = "a9de941bcbda508d0a45d28ae366bb3f08db2e36" }
@@ -89,7 +90,7 @@ return packer.startup(function(use)
     use { "williamboman/nvim-lsp-installer", commit = "e9f13d7acaa60aff91c58b923002228668c8c9e6" }
     use { "jose-elias-alvarez/null-ls.nvim", commit = "ff40739e5be6581899b43385997e39eecdbf9465" }
     use { "RRethy/vim-illuminate", commit = "c82e6d04f27a41d7fdcad9be0bce5bb59fcb78e5" }
-    use { "glepnir/lspsaga.nvim", commit="fd07a4e583571119b33826041c47af950341325f" }
+    use { "glepnir/lspsaga.nvim", commit="9bfd5630b2fbc7e952a310ab0c53a288b1ae7d1b" }
 
     -- DAP
     use { "mfussenegger/nvim-dap", commit="f4a3be57f61893cffa1e22aa5e1e7bded495fcf2" }
@@ -99,8 +100,9 @@ return packer.startup(function(use)
     use { "rcarriga/cmp-dap", commit="2c4cecbb9c4d255acc87ccaca727d1ad2f2b8c90" }
 
     -- Tests
-    use { "vim-test/vim-test", commit="a5b122e8c5eb47db5a034908172ccbee44f4e520" }
-    use { "rcarriga/vim-ultest", commit="c93eb128332f8245776b753407ab6c4432c4c556" }
+    use { "nvim-neotest/neotest", commit="4b2926fad7386468a01dca1a2f0890cb73fd7569" }
+    use { "nvim-neotest/neotest-python", commit="b6c46fe3a03d3db99f2d89c5d158e2728280bee8" }
+    use { "nvim-neotest/neotest-plenary", commit="7c3656f4d74da2b17a407038cacafa0d411b396b" }
 
     -- Snippets
     use { "L3MON4D3/LuaSnip", commit="a12441e0598e93e67235eba67c8e6fbffc896f06" }

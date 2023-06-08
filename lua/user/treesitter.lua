@@ -17,8 +17,8 @@ trstr.setup({
         enable = true,
     },
     indent = {
-        enable = true, 
-        disable = { "python", "css" } 
+        enable = true,
+        disable = { "python", "css" }
     },
     rainbow = { enable = true }
 })

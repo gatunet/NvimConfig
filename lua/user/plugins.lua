@@ -52,7 +52,7 @@ return packer.startup(function(use)
     use { "ahmedkhalf/project.nvim", commit="541115e762764bc44d7d3bf501b6e367842d3d4f" }
     use { "lukas-reineke/indent-blankline.nvim", commit="4a58fe6e9854ccfe6c6b0f59abb7cb8301e23025" }
     use { "kdheepak/lazygit.nvim", commit="9c73fd69a4c1cb3b3fc35b741ac968e331642600" }
-    use { "mrjones2014/smart-splits.nvim", commit="2af8bc37db4d94027a52f0fdd5674e45e0878df9" }
+    -- use { "mrjones2014/smart-splits.nvim", commit="2af8bc37db4d94027a52f0fdd5674e45e0878df9" }
     use { "eduardomillans/maximizer.nvim", commit="489172b333e91ae47fb2af6b267f25ce401ebc81" }
 
     -- Coloscheme
@@ -63,9 +63,9 @@ return packer.startup(function(use)
     -- Treesitter
     use {
         "nvim-treesitter/nvim-treesitter",
-        commit = "26105050aae3a15dd85feaeb0439e253e31d5ceb",
+        commit = "cc360a9",
     }
-    use { "p00f/nvim-ts-rainbow", commit = "837167f63445821c55e6eed9dbdac1b0b29afa92" }
+    -- use { "p00f/nvim-ts-rainbow", commit = "837167f63445821c55e6eed9dbdac1b0b29afa92" }
     use { "nvim-treesitter/nvim-treesitter-context", commit = "8bef4409a83219e800852f18c2894a60b64071b8" }
 
     -- Telescope
@@ -91,6 +91,8 @@ return packer.startup(function(use)
     use { "jose-elias-alvarez/null-ls.nvim", commit = "ff40739e5be6581899b43385997e39eecdbf9465" }
     use { "RRethy/vim-illuminate", commit = "c82e6d04f27a41d7fdcad9be0bce5bb59fcb78e5" }
     use { "glepnir/lspsaga.nvim", commit="9bfd5630b2fbc7e952a310ab0c53a288b1ae7d1b" }
+
+    use {"simrat39/rust-tools.nvim", commit="6b069c550838e784b510c2dde961e003759e710e"}
 
     -- DAP
     use { "mfussenegger/nvim-dap", commit="f4a3be57f61893cffa1e22aa5e1e7bded495fcf2" }

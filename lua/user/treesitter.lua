@@ -19,8 +19,7 @@ trstr.setup({
     indent = {
         enable = true,
         disable = { "python", "css" }
-    },
-    -- rainbow = { enable = true }
+    }
 })
 
 trstr_ctx.setup{}

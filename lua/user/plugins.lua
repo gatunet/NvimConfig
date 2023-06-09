@@ -65,8 +65,7 @@ return packer.startup(function(use)
         "nvim-treesitter/nvim-treesitter",
         commit = "cc360a9",
     }
-    -- use { "p00f/nvim-ts-rainbow", commit = "837167f63445821c55e6eed9dbdac1b0b29afa92" }
-    use { "nvim-treesitter/nvim-treesitter-context", commit = "8bef4409a83219e800852f18c2894a60b64071b8" }
+    use { "nvim-treesitter/nvim-treesitter-context", commit = "2182556aab4524b4fa8d00031bf1228ea2e4a023" }
 
     -- Telescope
     use {

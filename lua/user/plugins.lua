@@ -52,8 +52,8 @@ return packer.startup(function(use)
     use { "ahmedkhalf/project.nvim", commit="541115e762764bc44d7d3bf501b6e367842d3d4f" }
     use { "lukas-reineke/indent-blankline.nvim", commit="4a58fe6e9854ccfe6c6b0f59abb7cb8301e23025" }
     use { "kdheepak/lazygit.nvim", commit="9c73fd69a4c1cb3b3fc35b741ac968e331642600" }
-    -- use { "mrjones2014/smart-splits.nvim", commit="2af8bc37db4d94027a52f0fdd5674e45e0878df9" }
-    use { "eduardomillans/maximizer.nvim", commit="489172b333e91ae47fb2af6b267f25ce401ebc81" }
+    -- use { "eduardomillans/maximizer.nvim", commit="489172b333e91ae47fb2af6b267f25ce401ebc81" }
+    use { "christoomey/vim-tmux-navigator", commit="7db70e08ea03b3e4d91f63713d76134512e28d7e" }
 
     -- Coloscheme
     use { "sainnhe/sonokai", commit="888b68bed34a18be8f3341713ccd69b549951d95" }

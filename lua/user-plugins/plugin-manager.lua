@@ -10,7 +10,7 @@ local ensure_packer = function()
   return false
 end
 
-local packer_bootstrap = ensure_packer()
+local PACKER_BOOTSTRAP = ensure_packer()
 
 -- Autocommand that reloads neovim whenever you save the plugins.lua file
 vim.cmd [[
@@ -56,6 +56,20 @@ return packer.startup(function(use)
     use { "williamboman/mason.nvim", commit="41e75af1f578e55ba050c863587cffde3556ffa6" }
     use { "williamboman/mason-lspconfig.nvim", commit="56e435e09f8729af2d41973e81a0db440f8fe9c9" }
     use { "neovim/nvim-lspconfig", commit="0d9e870d01894c592d7ea93cfe0fa451916d9a7f" }
+
+    -- Autocomplete
+    use {
+        "hrsh7th/cmp-nvim-lsp",
+        commit="5af77f54de1b16c34b23cba810150689a3a90312",
+        requires={
+            { "hrsh7th/nvim-cmp", commit="538e37ba87284942c1d76ed38dd497e54e65b891" },
+            { "hrsh7th/cmp-buffer", commit="3022dbc9166796b644a841a02de8dd1cc1d311fa" },
+            { "hrsh7th/cmp-path", commit="91ff86cd9c29299a64f968ebb45846c485725f23" },
+            { "hrsh7th/cmp-cmdline", commit="8ee981b4a91f536f52add291594e89fb6645e451" },
+            { "L3MON4D3/LuaSnip", commit="2463d687fe704b76eb0aa3bb34e95f69a5bb0362" },
+            { "saadparwaiz1/cmp_luasnip", commit="05a9ab28b53f71d1aece421ef32fee2cb857a843" }
+        }
+    }
 
     -- Fuzzy finding
     use {

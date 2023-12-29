@@ -10,7 +10,7 @@ local ensure_packer = function()
   return false
 end
 
-local packer_bootstrap = ensure_packer()
+local PACKER_BOOTSTRAP = ensure_packer()
 
 -- Autocommand that reloads neovim whenever you save the plugins.lua file
 vim.cmd [[
@@ -57,10 +57,18 @@ return packer.startup(function(use)
     use { "williamboman/mason-lspconfig.nvim", commit="56e435e09f8729af2d41973e81a0db440f8fe9c9" }
     use { "neovim/nvim-lspconfig", commit="0d9e870d01894c592d7ea93cfe0fa451916d9a7f" }
 
+    -- Autocompletion
+    use { "ms-jpq/coq_nvim", branch="coq", commit="005bf9c5fe4f6f84570b899f62fcc14ee702f42b",
+        requires={
+            { "ms-jpq/coq.artifacts", branch="artifacts", commit="e7202d1a1b5cfa91446d5b7a035f915934e4d713" },
+            { "ms-jpq/coq.thirdparty", branch="3p", commit="f110ee91f1b2b897ab0026da347396756953ca41" },
+        }
+    }
+
     -- Fuzzy finding
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.5',
-        requires = {
+        requires={
             { 'nvim-lua/plenary.nvim', commit="55d9fe89e33efd26f532ef20223e5f9430c8b0c0" }
         }
     }

@@ -2,6 +2,8 @@ local mason_lspconfig = require("mason-lspconfig")
 local mason = require("mason")
 local lspconfig = require("lspconfig")
 
+local coq = require("coq")
+
 mason.setup({})
 
 mason_lspconfig.setup({
@@ -12,7 +14,10 @@ mason_lspconfig.setup({
 -- Languagues setup
 
 -- Lua
-lspconfig.lua_ls.setup({})
+-- lspconfig.lua_ls.setup({})
+lspconfig.lua_ls.setup(coq.lsp_ensure_capabilities({}))
+
+vim.cmd([[COQnow -s]])
 
 
 -- Use LspAttach autocommand to only map the following keys
@@ -26,7 +31,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
         vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
         vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
         vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, opts)
-        vim.keymap.set('n', '<C-k>', vim.lsp.buf.signature_help, opts)
+        vim.keymap.set('n', 'ds', vim.lsp.buf.signature_help, opts)
         vim.keymap.set({ 'n', 'v' }, '<space>ca', vim.lsp.buf.code_action, opts)
         vim.keymap.set('n', 'gr', vim.lsp.buf.references, opts)
     end,

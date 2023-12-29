@@ -52,6 +52,11 @@ return packer.startup(function(use)
     use { "windwp/nvim-autopairs", commit="9fd41181693dd4106b3e414a822bb6569924de81" }
     use { "numToStr/Comment.nvim", commit="0236521ea582747b58869cb72f70ccfa967d2e89" }
 
+    -- LSP
+    use { "williamboman/mason.nvim", commit="41e75af1f578e55ba050c863587cffde3556ffa6" }
+    use { "williamboman/mason-lspconfig.nvim", commit="56e435e09f8729af2d41973e81a0db440f8fe9c9" }
+    use { "neovim/nvim-lspconfig", commit="0d9e870d01894c592d7ea93cfe0fa451916d9a7f" }
+
     -- Fuzzy finding
     use {
         'nvim-telescope/telescope.nvim', tag = '0.1.5',

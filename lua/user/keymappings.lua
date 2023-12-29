@@ -27,10 +27,17 @@ keymap('n', '<leader>q', '<cmd>q!<CR>')
 keymap('n', '<leader>v', '<cmd>vsplit<CR>')
 keymap('n', '<leader>s', '<cmd>split<CR>')
 keymap('n', '<leader>h', '<cmd>noh<CR>')
+keymap('n', '<leader>r', '<cmd>source $HOME/.config/nvim/init.lua<CR>')
 
--- Comment
-keymap("n", "<leader>/", "<Plug>(comment_toggle_current_linewise)")
-keymap("x", "<leader>/", "<Plug>(comment_toggle_linewise_visual)")
+-- Fuzzy finding
+keymap('n', '<leader>f', "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<CR>")
+keymap('n', '<leader>F', "<cmd>Telescope live_grep theme=ivy<CR>")
+
+-- Git
+keymap('n', '<leader>gd', "<cmd>DiffviewFileHistory %<CR>")
+keymap('n', '<leader>gc', "<cmd>DiffviewClose<CR>")
+keymap('n', '<leader>gl', "<cmd>LazyGit<CR>")
+keymap('n', '<leader>gs', "<cmd>Telescope git_status<CR>")
 
 -- Debugging
-keymap("v", "<leader>i", "<cmd>lua require('dapui').eval()<CR>")
+-- keymap("v", "<leader>i", "<cmd>lua require('dapui').eval()<CR>")

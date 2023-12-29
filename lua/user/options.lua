@@ -41,7 +41,7 @@ local options = {
     clipboard = "unnamedplus",
     completeopt = { "menuone", "noselect" },
     shortmess = vim.opt.shortmess + "c",
-    timeoutlen = 100,
+    timeout = false,
     mouse = 'a'
 }
 
@@ -60,7 +60,7 @@ vim.cmd([[colorscheme sonokai]])
 
 -- Language Specific
 
--- Typescrip
+-- Typescript
 vim.cmd([[autocmd FileType typescript set tabstop=2]])
 vim.cmd([[autocmd FileType typescript set shiftwidth=2]])
 vim.cmd([[autocmd FileType typescript set softtabstop=2]])

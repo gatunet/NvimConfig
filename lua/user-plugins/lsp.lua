@@ -2,6 +2,10 @@ local mason_lspconfig = require("mason-lspconfig")
 local mason = require("mason")
 local lspconfig = require("lspconfig")
 
+vim.cmd([[
+let g:coq_settings = { 'auto_start': 'shut-up', 'keymap.jump_to_mark': '' }
+]])
+
 local coq = require("coq")
 
 mason.setup({})
@@ -16,8 +20,6 @@ mason_lspconfig.setup({
 -- Lua
 -- lspconfig.lua_ls.setup({})
 lspconfig.lua_ls.setup(coq.lsp_ensure_capabilities({}))
-
-vim.cmd([[COQnow -s]])
 
 
 -- Use LspAttach autocommand to only map the following keys

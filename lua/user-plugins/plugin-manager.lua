@@ -56,6 +56,7 @@ return packer.startup(function(use)
     use { "williamboman/mason.nvim", commit="41e75af1f578e55ba050c863587cffde3556ffa6" }
     use { "williamboman/mason-lspconfig.nvim", commit="56e435e09f8729af2d41973e81a0db440f8fe9c9" }
     use { "neovim/nvim-lspconfig", commit="0d9e870d01894c592d7ea93cfe0fa451916d9a7f" }
+    use { "https://git.sr.ht/~whynothugo/lsp_lines.nvim", commit="cf2306dd332e34a3e91075b40bdd4f6db824b2ee" }
 
     -- Autocompletion
     use { "ms-jpq/coq_nvim", branch="coq", commit="005bf9c5fe4f6f84570b899f62fcc14ee702f42b",

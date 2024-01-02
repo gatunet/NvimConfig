@@ -28,6 +28,8 @@ keymap('n', '<leader>v', '<cmd>vsplit<CR>')
 keymap('n', '<leader>s', '<cmd>split<CR>')
 keymap('n', '<leader>h', '<cmd>noh<CR>')
 keymap('n', '<leader>r', '<cmd>source $HOME/.config/nvim/init.lua<CR>')
+keymap('n', '<leader>t', '<cmd>term<CR>')
+keymap('n', '<leader>mi', '<cmd>Mason<CR>')
 
 -- Fuzzy finding
 keymap('n', '<leader>f', "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<CR>")
@@ -38,6 +40,3 @@ keymap('n', '<leader>gd', "<cmd>DiffviewFileHistory %<CR>")
 keymap('n', '<leader>gc', "<cmd>DiffviewClose<CR>")
 keymap('n', '<leader>gl', "<cmd>LazyGit<CR>")
 keymap('n', '<leader>gs', "<cmd>Telescope git_status<CR>")
-
--- Debugging
--- keymap("v", "<leader>i", "<cmd>lua require('dapui').eval()<CR>")

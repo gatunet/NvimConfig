@@ -14,6 +14,10 @@ mason_lspconfig.setup({
 -- Lua
 lspconfig.lua_ls.setup({})
 
+-- Python
+lspconfig.pylsp.setup({})
+lspconfig.pyright.setup({})
+
 
 -- Use LspAttach autocommand to only map the following keys
 -- after the language server attaches to the current buffer

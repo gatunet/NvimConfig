@@ -56,6 +56,7 @@ return packer.startup(function(use)
     use { "williamboman/mason.nvim", commit="41e75af1f578e55ba050c863587cffde3556ffa6" }
     use { "williamboman/mason-lspconfig.nvim", commit="56e435e09f8729af2d41973e81a0db440f8fe9c9" }
     use { "neovim/nvim-lspconfig", commit="0d9e870d01894c592d7ea93cfe0fa451916d9a7f" }
+    use { "https://git.sr.ht/~whynothugo/lsp_lines.nvim", commit="cf2306dd332e34a3e91075b40bdd4f6db824b2ee" }
 
     -- Autocomplete
     use {
@@ -82,7 +83,9 @@ return packer.startup(function(use)
     -- Status Line
     use {
         'nvim-lualine/lualine.nvim', commit="566b7036f717f3d676362742630518a47f132fff",
-        requires = { 'nvim-tree/nvim-web-devicons', commit="43aa2ddf476012a2155f5f969ee55ab17174da7a" }
+        requires={
+            'nvim-tree/nvim-web-devicons', commit="43aa2ddf476012a2155f5f969ee55ab17174da7a"
+        }
     }
 
     -- Tmux

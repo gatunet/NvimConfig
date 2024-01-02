@@ -1,11 +1,17 @@
 local mason_lspconfig = require("mason-lspconfig")
 local mason = require("mason")
 local lspconfig = require("lspconfig")
+local lsp_lines = require("lsp_lines")
 
 mason.setup({})
+lsp_lines.setup({})
+
+vim.diagnostic.config({
+  virtual_text = false,
+})
 
 mason_lspconfig.setup({
-    ensure_installed = { "lua_ls" }
+    ensure_installed = { "lua_ls", "pylsp" }
 })
 
 

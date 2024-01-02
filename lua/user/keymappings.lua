@@ -28,6 +28,8 @@ keymap('n', '<leader>v', '<cmd>vsplit<CR>')
 keymap('n', '<leader>s', '<cmd>split<CR>')
 keymap('n', '<leader>h', '<cmd>noh<CR>')
 keymap('n', '<leader>r', '<cmd>source $HOME/.config/nvim/init.lua<CR>')
+keymap('n', '<leader>t', '<cmd>term<CR>')
+keymap('n', '<leader>li', '<cmd>LspInfo<CR>')
 
 -- Fuzzy finding
 keymap('n', '<leader>f', "<cmd>lua require('telescope.builtin').find_files(require('telescope.themes').get_dropdown{previewer = false})<CR>")

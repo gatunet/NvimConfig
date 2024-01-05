@@ -24,6 +24,9 @@ lspconfig.lua_ls.setup({})
 lspconfig.pylsp.setup({})
 lspconfig.pyright.setup({})
 
+-- CSS
+lspconfig.cssls.setup({})
+
 
 -- Use LspAttach autocommand to only map the following keys
 -- after the language server attaches to the current buffer

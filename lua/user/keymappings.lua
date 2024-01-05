@@ -23,6 +23,7 @@ keymap('n', '<S-l>', '<cmd>vertical resize -2<CR>')
 
 -- Quick ops
 keymap('n', '<leader>w', '<cmd>w<CR>')
+keymap('n', '<leader>aw', '<cmd>wall<CR>')
 keymap('n', '<leader>q', '<cmd>q!<CR>')
 keymap('n', '<leader>v', '<cmd>vsplit<CR>')
 keymap('n', '<leader>s', '<cmd>split<CR>')

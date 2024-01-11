@@ -189,6 +189,11 @@ _G.packer_plugins = {
     path = "/Users/gabriel/.local/share/nvim/site/pack/packer/start/telescope.nvim",
     url = "https://github.com/nvim-telescope/telescope.nvim"
   },
+  ["vim-illuminate"] = {
+    loaded = true,
+    path = "/Users/gabriel/.local/share/nvim/site/pack/packer/start/vim-illuminate",
+    url = "https://github.com/RRethy/vim-illuminate"
+  },
   ["vim-tmux-navigator"] = {
     loaded = true,
     path = "/Users/gabriel/.local/share/nvim/site/pack/packer/start/vim-tmux-navigator",

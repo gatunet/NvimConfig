@@ -42,6 +42,7 @@ return packer.startup(function(use)
     -- Colorschemes
     use { "sainnhe/sonokai", commit="bdce098fc9e7202d3c555e2dc98c755ca1c23835" }
     use { "nvim-treesitter/nvim-treesitter", commit="27f68c0b6a87cbad900b3d016425450af8268026" }
+    use { "RRethy/vim-illuminate", commit="3bd2ab64b5d63b29e05691e624927e5ebbf0fb86" }
 
     -- Git
     use { "lewis6991/gitsigns.nvim", commit="d195f0c35ced5174d3ecce1c4c8ebb3b5bc23fa9" }

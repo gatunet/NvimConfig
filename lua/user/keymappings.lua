@@ -43,4 +43,6 @@ keymap('n', '<leader>gl', "<cmd>LazyGit<CR>")
 keymap('n', '<leader>gs', "<cmd>Telescope git_status<CR>")
 
 -- Debugging
--- keymap("v", "<leader>i", "<cmd>lua require('dapui').eval()<CR>")
+keymap("v", "<leader>de", "<cmd>lua require('dapui').eval()<CR>")
+keymap("n", "<leader>db", "<cmd>DapToggleBreakpoint<CR>")
+keymap("n", "<leader>dc", "<cmd>DapContinue<CR>")

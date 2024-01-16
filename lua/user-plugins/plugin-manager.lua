@@ -92,6 +92,19 @@ return packer.startup(function(use)
     -- Tmux
     use { "christoomey/vim-tmux-navigator", commit="38b1d0402c4600543281dc85b3f51884205674b6" }
 
+    -- Debugging
+    use {
+        "rcarriga/nvim-dap-ui",
+        commit="7e5e16427aaf814dc2d58e1b219def9ef2fa2435",
+        requires={
+            "mfussenegger/nvim-dap", commit="aad46274f09ba29933e4cef2257cdda5ec19cf7a"
+        }
+    }
+    use { "mfussenegger/nvim-dap-python", commit="091e4ae00a12085f9ed4200a3cd04af7179b8a23" }
+
+    -- Config
+    use { "folke/neodev.nvim", commit="be8d4d4cab6c13c6a572269c9d6a63774baba9a0" }
+
     if PACKER_BOOTSTRAP then
         require("packer").sync()
     end

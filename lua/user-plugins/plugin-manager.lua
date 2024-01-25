@@ -49,6 +49,9 @@ return packer.startup(function(use)
     use { "sindrets/diffview.nvim", commit="3dc498c9777fe79156f3d32dddd483b8b3dbd95f" }
     use { "kdheepak/lazygit.nvim", commit="1e08e3f5ac1152339690140e61a4a32b3bdc7de5" }
 
+    -- File Explorer
+    use { "nvim-tree/nvim-tree.lua", commit="7bdb220d0fe604a77361e92cdbc7af1b8a412126" }
+
     -- Editing
     use { "windwp/nvim-autopairs", commit="9fd41181693dd4106b3e414a822bb6569924de81" }
     use { "numToStr/Comment.nvim", commit="0236521ea582747b58869cb72f70ccfa967d2e89" }

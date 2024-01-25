@@ -46,3 +46,6 @@ keymap('n', '<leader>gs', "<cmd>Telescope git_status<CR>")
 keymap("v", "<leader>de", "<cmd>lua require('dapui').eval()<CR>")
 keymap("n", "<leader>db", "<cmd>DapToggleBreakpoint<CR>")
 keymap("n", "<leader>dc", "<cmd>DapContinue<CR>")
+
+-- File Explorer
+keymap("n", "<leader>e", "<cmd>NvimTreeToggle<CR>")

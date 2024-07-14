@@ -29,6 +29,9 @@ lspconfig.pyright.setup({})
 -- CSS
 lspconfig.cssls.setup({})
 
+-- Rust
+lspconfig.rust_analyzer.setup({})
+
 
 -- Use LspAttach autocommand to only map the following keys
 -- after the language server attaches to the current buffer

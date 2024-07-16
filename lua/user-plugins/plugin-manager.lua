@@ -64,15 +64,10 @@ return packer.startup(function(use)
 
     -- Autocomplete
     use {
-        "hrsh7th/cmp-nvim-lsp",
-        commit="5af77f54de1b16c34b23cba810150689a3a90312",
-        requires={
-            { "hrsh7th/nvim-cmp", commit="538e37ba87284942c1d76ed38dd497e54e65b891" },
-            { "hrsh7th/cmp-buffer", commit="3022dbc9166796b644a841a02de8dd1cc1d311fa" },
-            { "hrsh7th/cmp-path", commit="91ff86cd9c29299a64f968ebb45846c485725f23" },
-            { "hrsh7th/cmp-cmdline", commit="8ee981b4a91f536f52add291594e89fb6645e451" },
-            { "L3MON4D3/LuaSnip", commit="2463d687fe704b76eb0aa3bb34e95f69a5bb0362" },
-            { "saadparwaiz1/cmp_luasnip", commit="05a9ab28b53f71d1aece421ef32fee2cb857a843" }
+        "ms-jpq/coq_nvim",
+        commit="6b35465a58052f06b5ee0ca63606439ea7c862e8",
+        requires = {
+            { "ms-jpq/coq.artifacts", branch="artifacts" }
         }
     }
 
@@ -98,15 +93,17 @@ return packer.startup(function(use)
     -- Debugging
     use {
         "rcarriga/nvim-dap-ui",
-        commit="7e5e16427aaf814dc2d58e1b219def9ef2fa2435",
+        commit="a5606bc5958db86f8d92803bea7400ee26a8d7e4",
         requires={
-            "mfussenegger/nvim-dap", commit="aad46274f09ba29933e4cef2257cdda5ec19cf7a"
+            "mfussenegger/nvim-dap", commit="6f79b822997f2e8a789c6034e147d42bc6706770"
         }
     }
+    use { "nvim-neotest/nvim-nio", commit="a428f309119086dc78dd4b19306d2d67be884eee" }
     use { "mfussenegger/nvim-dap-python", commit="091e4ae00a12085f9ed4200a3cd04af7179b8a23" }
 
     -- Config
     use { "folke/neodev.nvim", commit="be8d4d4cab6c13c6a572269c9d6a63774baba9a0" }
+    use { "folke/trouble.nvim", commit="2946ce52869d3121637b962c31b1aab48d74a3c9" }
 
     if PACKER_BOOTSTRAP then
         require("packer").sync()

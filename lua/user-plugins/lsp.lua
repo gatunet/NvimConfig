@@ -4,6 +4,8 @@ local lspconfig = require("lspconfig")
 local lsp_lines = require("lsp_lines")
 local illuminate = require("illuminate")
 
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
+
 illuminate.configure({})
 mason.setup({})
 lsp_lines.setup({})
@@ -13,24 +15,34 @@ vim.diagnostic.config({
 })
 
 mason_lspconfig.setup({
-    ensure_installed = { "lua_ls", "pylsp" }
+    ensure_installed = { "lua_ls", "pylsp", "rust_analyzer" }
 })
 
 
 -- Languagues setup
 
 -- Lua
-lspconfig.lua_ls.setup({})
+lspconfig.lua_ls.setup({
+    capabilities = capabilities
+})
 
 -- Python
-lspconfig.pylsp.setup({})
-lspconfig.pyright.setup({})
+lspconfig.pylsp.setup({
+    capabilities = capabilities
+})
+lspconfig.pyright.setup({
+    capabilities = capabilities
+})
 
 -- CSS
-lspconfig.cssls.setup({})
+lspconfig.cssls.setup({
+    capabilities = capabilities
+})
 
 -- Rust
-lspconfig.rust_analyzer.setup({})
+lspconfig.rust_analyzer.setup({
+    capabilities = capabilities
+})
 
 
 -- Use LspAttach autocommand to only map the following keys
